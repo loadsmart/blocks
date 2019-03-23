@@ -1,0 +1,14 @@
+{
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+    },
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "tslint.configFile": ".tslint.json",
+    "tslint.jsEnable": true
+}
