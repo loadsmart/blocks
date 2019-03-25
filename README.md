@@ -1,6 +1,6 @@
 
 # building-blocks
 
-## Getting started
+## Installation
 
 `$ yarn add @loadsmart/building-blocks`
