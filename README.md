@@ -1,4 +1,4 @@
-# :european_castle: Blocks
+# blocks
 
 ## Installation
 

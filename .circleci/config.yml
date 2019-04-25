@@ -1,0 +1,50 @@
+version: 2
+jobs:
+  test:
+    working_directory: ~/blocks
+    docker:
+      - image: circleci/node:11.10.1
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+
+      - restore_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+
+      - run: cd packages/lib && yarn install
+
+      - save_cache:
+          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
+          paths:
+            - ~/.cache/yarn
+
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
+          paths:
+            - node_modules
+
+      - run:
+          name: jest tests
+          command: |
+            mkdir -p test-results/jest
+            cd packages/lib/ && yarn jest --maxWorkers=2
+          environment:
+            JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
+
+      - store_test_results:
+          path: test-results
+
+      - store_artifacts:
+          path: test-results
+
+      - run:
+          name: codecov
+          command: ./packages/lib/node_modules/codecov/bin/codecov
+
+workflows:
+  version: 2
+  general:
+    jobs:
+      - test
