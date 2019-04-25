@@ -13,10 +13,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@loadsmart/building-blocks": "file:../lib/",
     "@storybook/addon-knobs": "^5.0.10",
     "@storybook/addon-ondevice-knobs": "^4.1.18",
     "@storybook/addons": "^5.0.10",
-    "@loadsmart/building-blocks": "file:../lib/",
     "@storybook/react-native": "^4.1.18",
     "react": "16.6.1",
     "react-native": "0.57.7"
@@ -25,10 +25,8 @@
     "@types/storybook__addon-knobs": "^5.0.0",
     "@types/storybook__react-native": "^3.0.4",
     "babel-jest": "24.7.1",
-    "jest": "24.7.1",
     "metro-react-native-babel-preset": "0.53.1",
-    "react-native-storybook-loader": "^1.8.0",
-    "react-test-renderer": "16.6.1"
+    "react-native-storybook-loader": "^1.8.0"
   },
   "config": {
     "react-native-storybook-loader": {
@@ -38,8 +36,5 @@
       "pattern": "**/*.story.tsx",
       "outputFile": "./storyLoader.js"
     }
-  },
-  "jest": {
-    "preset": "react-native"
   }
 }

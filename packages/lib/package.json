@@ -19,8 +19,7 @@
     "url": "https://github.com/loadsmart/blocks/issues"
   },
   "homepage": "https://github.com/loadsmart/blocks#readme",
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.6.1",
     "react-native": "^0.57.7"
   },
@@ -28,6 +27,7 @@
     "@types/jest": "^24.0.11",
     "@types/react": "^16.8.8",
     "@types/react-native": "^0.57.41",
+    "@types/react-test-renderer": "^16.8.1",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.5.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
@@ -37,6 +37,7 @@
     "lint-staged": "^8.1.5",
     "metro-react-native-babel-preset": "^0.53.1",
     "prettier": "^1.16.4",
+    "react-test-renderer": "^16.8.6",
     "ts-jest": "^24.0.0",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
@@ -46,11 +47,16 @@
   },
   "jest": {
     "automock": false,
+    "preset": "react-native",
     "moduleFileExtensions": [
       "ts",
       "tsx",
       "js"
     ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
     "globals": {
       "ts-jest": {
         "tsConfig": "tsconfig.jest.json"

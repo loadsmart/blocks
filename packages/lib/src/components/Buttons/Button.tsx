@@ -9,13 +9,13 @@ import {
 } from 'react-native'
 import { Colors } from '../../res/index'
 
-enum ButtonDisplayState {
+export enum ButtonDisplayState {
   Normal,
   Disabled,
   Loading,
 }
 
-interface ButtonProps extends ViewProps {
+export interface ButtonProps extends ViewProps {
   title: string
   displayState?: ButtonDisplayState
   onPress?: () => void
@@ -38,8 +38,8 @@ export default class Button extends PureComponent<ButtonProps> {
   }
 
   private onPress = () => {
-    const { onPress } = this.props
-    if (onPress) {
+    const { displayState, onPress } = this.props
+    if (displayState === ButtonDisplayState.Normal && onPress) {
       onPress()
     }
   }

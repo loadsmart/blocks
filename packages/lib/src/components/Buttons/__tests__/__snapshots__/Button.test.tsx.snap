@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button when state is disabled has a valid snapshot 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#14d64d",
+          "borderRadius": 28,
+          "height": 50,
+          "justifyContent": "center",
+          "paddingHorizontal": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "white",
+          "fontSize": 15,
+        }
+      }
+    >
+      ACCEPT
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Button when state is loading has a valid snapshot 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#14d64d",
+          "borderRadius": 28,
+          "height": 50,
+          "justifyContent": "center",
+          "paddingHorizontal": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    <ActivityIndicator
+      animating={true}
+      color="#fff"
+      hidesWhenStopped={true}
+      size="small"
+      style={
+        Object {
+          "alignSelf": "center",
+          "position": "absolute",
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Button when state is normal has a valid snapshot 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#14d64d",
+          "borderRadius": 28,
+          "height": 50,
+          "justifyContent": "center",
+          "paddingHorizontal": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      style={
+        Object {
+          "alignSelf": "center",
+          "color": "white",
+          "fontSize": 15,
+        }
+      }
+    >
+      ACCEPT
+    </Text>
+  </View>
+</View>
+`;
