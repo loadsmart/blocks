@@ -13,13 +13,13 @@
     "xcode": "open ios/example.xcodeproj"
   },
   "dependencies": {
-    "@loadsmart/building-blocks": "file:../lib/",
+    "@loadsmart/blocks": "file:../lib/",
     "@storybook/addon-knobs": "^5.0.10",
     "@storybook/addon-ondevice-knobs": "^4.1.18",
     "@storybook/addons": "^5.0.10",
     "@storybook/react-native": "^4.1.18",
-    "react": "16.6.1",
-    "react-native": "0.57.7"
+    "react": "^16.6.1",
+    "react-native": "^0.59.5"
   },
   "devDependencies": {
     "@types/storybook__addon-knobs": "^5.0.0",

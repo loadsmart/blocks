@@ -1,5 +1,5 @@
 import { text, withKnobs } from '@storybook/addon-knobs'
-import { Button } from '@loadsmart/building-blocks'
+import { Button } from '@loadsmart/blocks'
 import { storiesOf } from '@storybook/react-native'
 import React from 'react'
 

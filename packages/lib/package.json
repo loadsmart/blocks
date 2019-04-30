@@ -19,9 +19,9 @@
     "url": "https://github.com/loadsmart/blocks/issues"
   },
   "homepage": "https://github.com/loadsmart/blocks#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.6.1",
-    "react-native": "^0.57.7"
+    "react-native": "^0.59.5"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",

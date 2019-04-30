@@ -7,7 +7,7 @@ import {
   View,
   ViewProps,
 } from 'react-native'
-import { Colors } from '../../res/index'
+import { Colors, Fonts } from '../../res/index'
 
 export enum ButtonDisplayState {
   Normal,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    // fontFamily: Fonts.SharpSansExtrabold,
+    fontFamily: Fonts.SharpSansExtrabold,
     fontSize: 15,
     alignSelf: 'center',
   },
