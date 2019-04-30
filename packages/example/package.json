@@ -28,6 +28,11 @@
     "metro-react-native-babel-preset": "0.53.1",
     "react-native-storybook-loader": "^1.8.0"
   },
+  "rnpm": {
+    "assets": [
+      "./node_modules/@loadsmart/blocks/assets/fonts/"
+    ]
+  },
   "config": {
     "react-native-storybook-loader": {
       "searchDir": [
