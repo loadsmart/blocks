@@ -36,6 +36,7 @@ exports[`Button when state is disabled has a valid snapshot 1`] = `
         Object {
           "alignSelf": "center",
           "color": "white",
+          "fontFamily": "SharpSans-Extrabold",
           "fontSize": 15,
         }
       }
@@ -129,6 +130,7 @@ exports[`Button when state is normal has a valid snapshot 1`] = `
         Object {
           "alignSelf": "center",
           "color": "white",
+          "fontFamily": "SharpSans-Extrabold",
           "fontSize": 15,
         }
       }
