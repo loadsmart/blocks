@@ -74,7 +74,9 @@
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.(ts|tsx|js)"
+      "<rootDir>/src/**/*.(ts|tsx|js)",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/src/**/index.ts"
     ],
     "coveragePathIgnorePatterns": [
       "__stories__",
