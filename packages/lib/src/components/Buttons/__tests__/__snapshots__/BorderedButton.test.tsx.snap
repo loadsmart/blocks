@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BorderedButton when icon is set has a valid snapshot 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderRadius": 21,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 42,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 8,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../assets/images/plus-sign.png",
+      }
+    }
+  />
+  <Text
+    numberOfLines={1}
+    style={
+      Array [
+        Object {
+          "color": "#4c4848",
+          "fontFamily": "SharpSans-Bold",
+          "fontSize": 12,
+          "marginLeft": 4,
+        },
+        undefined,
+      ]
+    }
+  >
+    CALL LOADSMART
+  </Text>
+</View>
+`;
+
+exports[`BorderedButton when icon is undefined has a valid snapshot 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderRadius": 21,
+      "borderWidth": 1,
+      "flexDirection": "row",
+      "height": 42,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 8,
+    }
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      Array [
+        Object {
+          "color": "#4c4848",
+          "fontFamily": "SharpSans-Bold",
+          "fontSize": 12,
+          "marginLeft": 4,
+        },
+        undefined,
+      ]
+    }
+  >
+    CALL LOADSMART
+  </Text>
+</View>
+`;

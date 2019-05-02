@@ -7,7 +7,7 @@ import {
   View,
   ViewProps,
 } from 'react-native'
-import { Colors, Fonts } from '../../res/index'
+import { Colors, Fonts } from '../../res/'
 
 export enum ButtonDisplayState {
   Normal,
