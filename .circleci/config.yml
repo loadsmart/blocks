@@ -13,7 +13,7 @@ jobs:
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
-      - run: cd packages/lib && yarn install
+      - run: yarn install
 
       - save_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
@@ -29,7 +29,7 @@ jobs:
           name: jest tests
           command: |
             mkdir -p test-results/jest
-            cd packages/lib/ && yarn jest --maxWorkers=2
+            yarn jest --maxWorkers=2
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
 
@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: codecov
-          command: ./packages/lib/node_modules/codecov/bin/codecov
+          command: ./node_modules/codecov/bin/codecov
 
 workflows:
   version: 2

@@ -1,9 +1,10 @@
 import React from 'react'
 import { ActivityIndicator, Text, TouchableOpacity } from 'react-native'
 import renderer from 'react-test-renderer'
-import Button, { ButtonDisplayState, ButtonProps } from '../Button'
+import PrimaryButton from '../PrimaryButton'
+import { ButtonDisplayState, ButtonProps } from '../ButtonProps'
 
-describe('Button', () => {
+describe('PrimaryButton', () => {
   describe('when state is normal', () => {
     let testRenderer: renderer.ReactTestRenderer
     const onPressCallback = jest.fn()
@@ -14,7 +15,7 @@ describe('Button', () => {
         displayState: ButtonDisplayState.Normal,
         onPress: onPressCallback,
       }
-      testRenderer = renderer.create(<Button {...props} />)
+      testRenderer = renderer.create(<PrimaryButton {...props} />)
     })
 
     it('renders title', () => {
@@ -47,7 +48,7 @@ describe('Button', () => {
         displayState: ButtonDisplayState.Loading,
         onPress: onPressCallback,
       }
-      testRenderer = renderer.create(<Button {...props} />)
+      testRenderer = renderer.create(<PrimaryButton {...props} />)
     })
 
     it('does not render title', () => {
@@ -79,7 +80,7 @@ describe('Button', () => {
         displayState: ButtonDisplayState.Disabled,
         onPress: onPressCallback,
       }
-      testRenderer = renderer.create(<Button {...props} />)
+      testRenderer = renderer.create(<PrimaryButton {...props} />)
     })
 
     it('renders title', () => {
