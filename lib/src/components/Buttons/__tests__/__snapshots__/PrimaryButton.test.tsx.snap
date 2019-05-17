@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button when state is disabled has a valid snapshot 1`] = `
+exports[`PrimaryButton when state is disabled has a valid snapshot 1`] = `
 <View
   accessible={true}
   isTVSelectable={true}
@@ -47,7 +47,7 @@ exports[`Button when state is disabled has a valid snapshot 1`] = `
 </View>
 `;
 
-exports[`Button when state is loading has a valid snapshot 1`] = `
+exports[`PrimaryButton when state is loading has a valid snapshot 1`] = `
 <View
   accessible={true}
   isTVSelectable={true}
@@ -94,7 +94,7 @@ exports[`Button when state is loading has a valid snapshot 1`] = `
 </View>
 `;
 
-exports[`Button when state is normal has a valid snapshot 1`] = `
+exports[`PrimaryButton when state is normal has a valid snapshot 1`] = `
 <View
   accessible={true}
   isTVSelectable={true}

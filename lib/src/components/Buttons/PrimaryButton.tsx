@@ -1,27 +1,9 @@
 import React, { PureComponent } from 'react'
-import {
-  ActivityIndicator,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  ViewProps,
-} from 'react-native'
-import { Colors, Fonts } from '../../res/index'
+import { ActivityIndicator, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Colors, Fonts } from '../../res/'
+import { ButtonProps, ButtonDisplayState } from './ButtonProps'
 
-export enum ButtonDisplayState {
-  Normal,
-  Disabled,
-  Loading,
-}
-
-export interface ButtonProps extends ViewProps {
-  title: string
-  displayState?: ButtonDisplayState
-  onPress?: () => void
-}
-
-export default class Button extends PureComponent<ButtonProps> {
+export default class PrimaryButton extends PureComponent<ButtonProps> {
   public render() {
     return (
       <TouchableOpacity onPress={this.onPress.bind(this)}>
