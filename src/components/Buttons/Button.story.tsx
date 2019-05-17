@@ -7,7 +7,7 @@ import { CenterPaddedDecorator } from '../../decorators'
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)
   .addDecorator(CenterPaddedDecorator)
-  .add('Regular Button', () => {
+  .add('Primary Button', () => {
     const title = text('Title', 'Accept')
     return <Button title={title} />
   })
