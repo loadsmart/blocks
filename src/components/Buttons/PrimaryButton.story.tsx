@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react-native'
 import { text, withKnobs, select } from '@storybook/addon-knobs'
 import { CenterPaddedDecorator } from '../../decorators'
 import { PrimaryButton, ButtonDisplayState } from '@loadsmart/blocks'
+import { Alert } from 'react-native'
 
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)
@@ -18,5 +19,9 @@ storiesOf('Buttons', module)
       },
       ButtonDisplayState.Normal
     )
-    return <PrimaryButton title={title} displayState={displayState} />
+
+    const onPress = () => Alert.alert('onPress')
+
+    const props = { title, displayState, onPress }
+    return <PrimaryButton {...props} />
   })
