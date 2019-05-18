@@ -3,7 +3,7 @@ import { ActivityIndicator, Text, TouchableOpacity, Image } from 'react-native'
 import renderer from 'react-test-renderer'
 import SecondaryButton from '../SecondaryButton'
 import { ButtonDisplayState, ButtonProps, ButtonHeight } from '../ButtonProps'
-import { Images } from '../../../res/'
+import { Images } from '../../../res/index'
 
 describe('SecondaryButton', () => {
   let testRenderer: renderer.ReactTestRenderer
