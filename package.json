@@ -6,6 +6,7 @@
   "scripts": {
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "clear": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-*",
+    "deploy": "yarn workspaces run publish",
     "hard-reset": "watchman watch-del-all && rm -rf node_modules && yarn install",
     "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
     "prestorybook": "rnstl",
