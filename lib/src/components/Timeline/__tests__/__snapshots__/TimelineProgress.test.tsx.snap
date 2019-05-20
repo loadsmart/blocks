@@ -1,0 +1,631 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineProgress bottomPart can be empty 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#d4d4d4",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress bottomPart can be filled 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress bottomPart can be invisible 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 0,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress bottomPart can be visible 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress marker can be empty 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#d4d4d4",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress marker can be filled 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress topPart can be empty 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#d4d4d4",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress topPart can be filled 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress topPart can be invisible 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 0,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`TimelineProgress topPart can be visible 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "minHeight": 48,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="progress top line"
+    style={
+      Array [
+        Object {
+          "height": 16,
+          "width": 4,
+          "zIndex": 3,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 8,
+          "height": 16,
+          "width": 16,
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 2,
+          "width": 4,
+          "zIndex": 1,
+        },
+        Object {
+          "backgroundColor": "#14d64d",
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+</View>
+`;
