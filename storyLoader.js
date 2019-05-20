@@ -8,6 +8,7 @@ function loadStories() {
   require('./src/components/Buttons/PrimaryButton.story')
   require('./src/components/Buttons/SecondaryButton.story')
   require('./src/components/Buttons/TertiaryButton.story')
+  require('./src/components/TextInputs/TextInput.story')
 }
 
 const stories = [
@@ -15,6 +16,7 @@ const stories = [
   './src/components/Buttons/PrimaryButton.story',
   './src/components/Buttons/SecondaryButton.story',
   './src/components/Buttons/TertiaryButton.story',
+  './src/components/TextInputs/TextInput.story',
 ]
 
 module.exports = {
