@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react-native'
 import { withKnobs, text, select } from '@storybook/addon-knobs'
 import { CenterPaddedDecorator } from '../../decorators'
 import { ButtonDisplayState, SecondaryButton, ButtonHeight } from '@loadsmart/blocks'
+import { Alert } from 'react-native'
 
 storiesOf('Buttons', module)
   .addDecorator(withKnobs)
@@ -29,6 +30,8 @@ storiesOf('Buttons', module)
       ButtonDisplayState.Normal
     )
 
-    const props = { title, displayState, buttonHeight }
+    const onPress = () => Alert.alert('onPress')
+
+    const props = { title, displayState, buttonHeight, onPress }
     return <SecondaryButton {...props} />
   })
