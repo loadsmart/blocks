@@ -9,6 +9,7 @@ function loadStories() {
   require('./src/components/Buttons/SecondaryButton.story')
   require('./src/components/Buttons/TertiaryButton.story')
   require('./src/components/TextInputs/TextInput.story')
+  require('./src/components/Timeline/TimelineItem.story')
   require('./src/components/Timeline/TimelineProgress.story')
 }
 
@@ -18,6 +19,7 @@ const stories = [
   './src/components/Buttons/SecondaryButton.story',
   './src/components/Buttons/TertiaryButton.story',
   './src/components/TextInputs/TextInput.story',
+  './src/components/Timeline/TimelineItem.story',
   './src/components/Timeline/TimelineProgress.story',
 ]
 

@@ -3,7 +3,8 @@ const Colors = {
   Charcoal: '#3c3d3a',
   CoralPink: '#fd576a',
   OrangePeel: '#ff9800',
-  VeryLightPinkFour: '#d4d4d4',
+  LightGray: '#d4d4d4',
+  VeryLightGray: '#eee',
   White: '#fff',
 }
 
