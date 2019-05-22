@@ -1,2 +1,2 @@
-export { default as TimelineItem } from './TimelineItem'
-export { default as TimelineProgress } from './TimelineProgress'
+export * from './TimelineItem'
+export * from './TimelineProgress'

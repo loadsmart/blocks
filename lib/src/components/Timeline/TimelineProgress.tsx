@@ -6,7 +6,10 @@ const lineWidth = 4
 const topPartHeight = 16
 const markerDiameter = 16
 
-export type LineStyle = 'empty' | 'filled'
+export enum LineStyle {
+  Empty,
+  Filled,
+}
 
 interface Props extends ViewProps {
   topPartStyle?: LineStyle
@@ -18,10 +21,10 @@ interface Props extends ViewProps {
 
 export default class TimelineProgress extends PureComponent<Props> {
   static defaultProps = {
-    topPartStyle: 'filled',
+    topPartStyle: LineStyle.Filled,
     topPartVisible: true,
-    markerStyle: 'filled',
-    bottomPartStyle: 'filled',
+    markerStyle: LineStyle.Filled,
+    bottomPartStyle: LineStyle.Filled,
     bottomPartVisible: true,
   }
 
@@ -58,7 +61,7 @@ export default class TimelineProgress extends PureComponent<Props> {
   }
 
   private lineStyleToColor(style?: LineStyle) {
-    return style === 'empty' ? Colors.LightGray : Colors.AlgaeGreen
+    return style === LineStyle.Empty ? Colors.LightGray : Colors.AlgaeGreen
   }
 }
 
