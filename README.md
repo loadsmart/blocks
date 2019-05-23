@@ -1,7 +1,7 @@
 # blocks
 Loadsmart's React Native Components
 
-[![CircleCI](https://circleci.com/gh/loadsmart/blocks.svg?style=svg)](https://circleci.com/gh/loadsmart/blocks)
+[![Build Status](https://circleci.com/gh/loadsmart/blocks.svg?style=shield)](https://circleci.com/gh/loadsmart/blocks/tree/master)
 [![codecov](https://codecov.io/gh/loadsmart/blocks/branch/master/graph/badge.svg)](https://codecov.io/gh/loadsmart/blocks)
 
 ## Installation
