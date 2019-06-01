@@ -93,7 +93,7 @@ const stylesFromProps = (props: TimelineItemProps) => {
       height: 3,
       width: '100%',
       borderTopWidth: 1,
-      borderTopColor: '#D5D5D5',
+      borderTopColor: Colors.LightGray,
       borderBottomWidth: 1,
       borderBottomColor: Colors.White,
       position: 'absolute',
