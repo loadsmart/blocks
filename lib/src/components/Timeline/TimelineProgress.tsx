@@ -19,7 +19,7 @@ interface Props extends ViewProps {
   bottomPartVisible?: boolean
 }
 
-export default class TimelineProgress extends PureComponent<Props> {
+export class TimelineProgress extends PureComponent<Props> {
   static defaultProps = {
     topPartStyle: LineStyle.Filled,
     topPartVisible: true,

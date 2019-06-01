@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.1]
+### Fixed
+- Timeline import
+
 ## [0.4.0]
 ### Added
 - Timeline Progress Line

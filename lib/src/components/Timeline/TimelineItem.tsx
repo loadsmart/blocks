@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
-import ProgressLine, { LineStyle } from './TimelineProgress'
+import { LineStyle, TimelineProgress } from './TimelineProgress'
 import { Colors, Fonts, Images } from '../../res'
 
 export interface TimelineItemProps {
@@ -13,14 +13,14 @@ export interface TimelineItemProps {
   isLast?: boolean
 }
 
-export default class TimelineItem extends PureComponent<TimelineItemProps> {
+export class TimelineItem extends PureComponent<TimelineItemProps> {
   public render() {
     const { isActive, isCompleted, isFirst, isLast } = this.props
     const styles = stylesFromProps(this.props)
 
     return (
       <View style={styles.wrapper}>
-        <ProgressLine
+        <TimelineProgress
           style={styles.progressLine}
           topPartVisible={isFirst !== true}
           bottomPartVisible={isLast !== true}

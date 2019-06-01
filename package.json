@@ -12,7 +12,7 @@
     "prestorybook": "rnstl",
     "prettier-write": "prettier --write",
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "storybook": "storybook start -p 9001 -c .storybook",
+    "storybook": "storybook start -p 7007 -c .storybook",
     "test": "jest",
     "xcode": "open ios/example.xcodeproj"
   },
