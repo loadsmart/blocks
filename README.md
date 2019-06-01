@@ -16,7 +16,9 @@ Loadsmart's React Native Components
 yarn test
 ```
 
-## Instalation (macOS only)
+## Sample App
+
+### Instalation (macOS only)
 
 ```
 brew install yarn watchman
@@ -25,9 +27,9 @@ cd rhodes/
 yarn install
 ```
 
-## Running the sample app
+### Running
 
-### iOS Simulator
+#### iOS Simulator
 
 Make sure you have Xcode and Command Line Tools installed:
 
@@ -46,7 +48,7 @@ First time you run this command, it may take a while to finish. This is because 
 
 To speed things up development wise, keep Metro Bundler running and enable `Hot Reloading` in the Developer Menu by pressing <kbd>COMMAND</kbd>+<kbd>D</kbd>. Navigate to the screen you're editing on the app and edit it's TS file. App should refresh right after you save the file. If you need to reload the whole JS bundle, you can do that by pressing <kbd>COMMAND</kbd>+<kbd>R</kbd> on simulator window.
 
-### iOS device
+#### iOS device
 
 Download and install the development certificates and provisioning profiles by running:
 
@@ -69,7 +71,7 @@ Then execute:
 yarn ios --device
 ```
 
-### Android Emulator
+#### Android Emulator
 
 Make sure you have the Android SDK installed and a virtual device to run the app. You can follow the instructions in Google's [official website](https://developer.android.com/studio/install).
 
@@ -83,7 +85,7 @@ First time you run this command, it may take a while to finish. This is because 
 
 To speed things up development wise, keep Metro Bundler running and enable `Hot Reloading` in the Developer Menu by pressing <kbd>COMMAND</kbd>+<kbd>M</kbd>. Navigate to the screen you're editing on the app and edit it's TS file. App should refresh right after you save the file. If you need to reload the whole JS bundle, you can do that by double pressing <kbd>R</kbd> on simulator window.
 
-### Android device
+#### Android device
 
 To run the app in a real device first make sure you have enabled the developers options in your Android device and activated the ADB Debugging. After that you can follow the same procedure.
 
