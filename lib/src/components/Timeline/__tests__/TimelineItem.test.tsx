@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import TimelineItem, { TimelineItemProps } from '../TimelineItem'
+import { TimelineItem, TimelineItemProps } from '../TimelineItem'
 import { View, Image } from 'react-native'
 import { Images } from '../../../res'
 

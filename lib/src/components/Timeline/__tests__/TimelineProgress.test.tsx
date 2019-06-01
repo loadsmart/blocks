@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import TimelineProgress, { LineStyle } from '../TimelineProgress'
+import { LineStyle, TimelineProgress } from '../TimelineProgress'
 
 //TODO better to test this check styles?
 describe('TimelineProgress', () => {
