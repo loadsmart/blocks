@@ -7,7 +7,9 @@ Loadsmart's React Native Components
 
 ## Installation
 
-`$ yarn add @loadsmart/blocks`
+```
+$ yarn add @loadsmart/blocks
+```
 
 
 ## Testing
