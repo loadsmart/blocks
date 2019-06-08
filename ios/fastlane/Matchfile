@@ -1,0 +1,4 @@
+git_url "git@github.com:loadsmart/ios-code-signing.git"
+
+app_identifier "io.loadsmart.blocks"
+username "mobile@loadsmart.com"
