@@ -2,7 +2,9 @@
   "name": "example",
   "version": "0.0.1",
   "private": true,
-  "workspaces": ["lib"],
+  "workspaces": [
+    "lib"
+  ],
   "scripts": {
     "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "clear": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-*",
@@ -25,6 +27,8 @@
     "@storybook/addon-ondevice-notes": "4.0.11",
     "@storybook/addons": "4.0.11",
     "@storybook/react-native": "4.0.11",
+    "handlebars": "^4.1.2",
+    "querystringify": ">=2.0.0",
     "react": "^16.6.1",
     "react-native": "^0.59.5"
   },
