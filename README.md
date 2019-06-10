@@ -1,4 +1,4 @@
-# blocks
+# :european_castle: Blocks
 Loadsmart's React Native Components
 
 [![Build Status](https://circleci.com/gh/loadsmart/blocks.svg?style=shield)](https://circleci.com/gh/loadsmart/blocks/tree/master)
