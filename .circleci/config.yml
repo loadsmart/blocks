@@ -48,3 +48,9 @@ workflows:
   general:
     jobs:
       - test
+      - distribute_ios:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master

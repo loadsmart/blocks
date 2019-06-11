@@ -47,3 +47,6 @@ buck-out/
       
 coverage/
 .jest/
+
+# iOS
+./ios/fastlane/report.xml
