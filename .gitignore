@@ -50,3 +50,4 @@ coverage/
 
 # iOS
 ./ios/fastlane/report.xml
+./ios/example.app.dSYM.zip
