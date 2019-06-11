@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react-native'
 import { Dialog, SecondaryButton, PrimaryButton, DialogBox } from '@loadsmart/blocks'
-import { text } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 import { View, TouchableOpacity, Text } from 'react-native'
 import { Props, State } from './helpers'
 import { CenterDecorator } from '../../decorators'
+import SampleImages from '../../images'
 
 storiesOf('Dialog', module)
   .addDecorator(CenterDecorator)
@@ -20,7 +21,12 @@ storiesOf('Dialog', module)
       }
 
       render() {
-        const title = text('Title', 'Hi. Are you ready to start driving to the port?')
+        const title = text('Title', 'Are you ready to start driving to the port?')
+        const hasImage = boolean('Image?', true)
+
+        const message = text('Message', 'Make sure to turn you tracking on when you get there.')
+        const hasMessage = boolean('Message?', true)
+
         const buttons = (
           <View>
             <PrimaryButton title={'Start'} onPress={this.toggleModal} />
@@ -37,7 +43,9 @@ storiesOf('Dialog', module)
 
             <Dialog
               visible={this.state.modalVisible}
+              image={hasImage ? SampleImages.TruckDriving : undefined}
               title={title}
+              message={hasMessage ? message : undefined}
               buttons={buttons}
               onPressOutside={this.toggleModal}
             />
