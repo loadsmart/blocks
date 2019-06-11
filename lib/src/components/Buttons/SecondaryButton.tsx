@@ -4,6 +4,10 @@ import { TouchableOpacity, StyleSheet, Text, Image, ActivityIndicator } from 're
 import { Colors, Fonts } from '../../res/'
 
 export default class SecondaryButton extends PureComponent<ButtonProps> {
+  static defaultProps = {
+    displayState: ButtonDisplayState.Normal,
+  }
+
   public render() {
     const styles = stylesFromProps(this.props)
     return (

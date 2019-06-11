@@ -4,6 +4,10 @@ import { Colors, Fonts } from '../../res/'
 import { ButtonProps, ButtonDisplayState } from './ButtonProps'
 
 export default class PrimaryButton extends PureComponent<ButtonProps> {
+  static defaultProps = {
+    displayState: ButtonDisplayState.Normal,
+  }
+
   public render() {
     return (
       <TouchableOpacity onPress={this.onPress.bind(this)}>

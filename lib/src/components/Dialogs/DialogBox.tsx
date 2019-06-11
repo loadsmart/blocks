@@ -1,17 +1,23 @@
 import React, { PureComponent } from 'react'
-import { StyleSheet, View, ViewProps, Modal } from 'react-native'
+import { StyleSheet, View, Modal, TouchableWithoutFeedback, ViewStyle } from 'react-native'
+import { DismissibleModalProps } from './DismissibleModalProps'
 
-interface Props extends ViewProps {
-  visible?: boolean
+interface Props extends DismissibleModalProps {
+  dialogStyle?: ViewStyle
 }
 
 export default class DialogBox extends PureComponent<Props> {
   public render() {
     return (
-      <Modal visible={this.props.visible} animationType={'fade'} transparent={true}>
-        <View style={styles.modal}>
-          <View style={[styles.box, this.props.style]}>{this.props.children}</View>
-        </View>
+      <Modal {...this.props} animationType={'fade'} transparent={true}>
+        <TouchableWithoutFeedback onPress={this.props.onPressOutside}>
+          <View style={styles.modal}>
+            {/* this is needed to avoid outside view 'stealing' the click from the dialog box */}
+            <TouchableWithoutFeedback>
+              <View style={[styles.box, this.props.dialogStyle]}>{this.props.children}</View>
+            </TouchableWithoutFeedback>
+          </View>
+        </TouchableWithoutFeedback>
       </Modal>
     )
   }

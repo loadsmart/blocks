@@ -8,12 +8,12 @@ import {
   Text,
   TextStyle,
   View,
-  ModalProps,
 } from 'react-native'
 import { Colors, Fonts } from '../../res'
 import DialogBox from './DialogBox'
+import { DismissibleModalProps } from './DismissibleModalProps'
 
-interface Props extends ModalProps {
+interface Props extends DismissibleModalProps {
   image?: ImageSourcePropType
   imageStyle?: StyleProp<ImageStyle>
   title?: string
@@ -28,7 +28,7 @@ export default class Dialog extends PureComponent<Props> {
     const buttonsMarginStyle = { marginTop: this.props.inputField ? 8 : 22 }
 
     return (
-      <DialogBox visible={this.props.visible} style={styles.box}>
+      <DialogBox {...this.props} dialogStyle={styles.box}>
         {this.props.image && <Image source={this.props.image} style={this.props.imageStyle} />}
         {this.props.title && (
           <Text style={[styles.title, this.props.titleStyle]}>{this.props.title}</Text>

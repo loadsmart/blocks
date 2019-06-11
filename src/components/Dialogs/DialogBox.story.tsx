@@ -3,11 +3,7 @@ import { storiesOf } from '@storybook/react-native'
 import { DialogBox } from '@loadsmart/blocks'
 import { Text, View, TouchableOpacity } from 'react-native'
 import { CenterDecorator } from '../../decorators'
-
-interface Props {}
-interface State {
-  modalVisible: boolean
-}
+import { Props, State } from './helpers'
 
 storiesOf('Dialog', module)
   .addDecorator(CenterDecorator)
@@ -29,7 +25,10 @@ storiesOf('Dialog', module)
               <Text>Tap to open</Text>
             </TouchableOpacity>
 
-            <DialogBox visible={this.state.modalVisible}>
+            <DialogBox
+              visible={this.state.modalVisible}
+              onPressOutside={this.toggleModal.bind(this)}
+            >
               <Text style={{ fontWeight: 'bold' }}>This is a dialog box.</Text>
               <View style={{ height: 30 }} />
               <TouchableOpacity onPress={this.toggleModal.bind(this)}>
