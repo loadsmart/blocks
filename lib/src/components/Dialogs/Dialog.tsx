@@ -13,7 +13,7 @@ import { Colors, Fonts } from '../../res'
 import DialogBox from './DialogBox'
 import { DismissibleModalProps } from './DismissibleModalProps'
 
-interface Props extends DismissibleModalProps {
+export interface DialogProps extends DismissibleModalProps {
   image?: ImageSourcePropType
   imageStyle?: StyleProp<ImageStyle>
   title?: string
@@ -23,7 +23,7 @@ interface Props extends DismissibleModalProps {
   buttons?: JSX.Element
 }
 
-export default class Dialog extends PureComponent<Props> {
+export class Dialog extends PureComponent<DialogProps> {
   public render() {
     const buttonsMarginStyle = { marginTop: this.props.inputField ? 8 : 22 }
 
