@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Icons for iOS sample app
 - Dialog component
 
+### Changed
+- Add ability to include an icon for PrimaryButton and SecondaryButton
+
 ## [0.4.1]
 ### Fixed
 - Timeline import
