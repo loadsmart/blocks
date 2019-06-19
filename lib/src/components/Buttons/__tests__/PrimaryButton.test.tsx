@@ -1,8 +1,9 @@
 import React from 'react'
-import { ActivityIndicator, Text, TouchableOpacity } from 'react-native'
+import { ActivityIndicator, Text, TouchableOpacity, Image } from 'react-native'
 import renderer from 'react-test-renderer'
 import PrimaryButton from '../PrimaryButton'
 import { ButtonDisplayState, ButtonProps } from '../ButtonProps'
+import { Images } from '../../../res'
 
 describe('PrimaryButton', () => {
   describe('when state is normal', () => {
@@ -11,11 +12,17 @@ describe('PrimaryButton', () => {
 
     beforeEach(() => {
       const props: ButtonProps = {
+        icon: Images.Warning,
         title: 'accept',
         displayState: ButtonDisplayState.Normal,
         onPress: onPressCallback,
       }
       testRenderer = renderer.create(<PrimaryButton {...props} />)
+    })
+
+    it('renders an icon', () => {
+      const icon = testRenderer.root.findByType(Image)
+      expect(icon.props.source).toBe(Images.Warning)
     })
 
     it('renders title', () => {
@@ -49,6 +56,10 @@ describe('PrimaryButton', () => {
         onPress: onPressCallback,
       }
       testRenderer = renderer.create(<PrimaryButton {...props} />)
+    })
+
+    it('does not render icon', () => {
+      expect(testRenderer.root.findAllByType(Image)).toHaveLength(0)
     })
 
     it('does not render title', () => {

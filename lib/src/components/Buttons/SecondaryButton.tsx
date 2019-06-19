@@ -15,17 +15,27 @@ export default class SecondaryButton extends PureComponent<ButtonProps> {
         onPress={this.onPress.bind(this)}
         style={[styles.wrapper, this.props.style]}
       >
+        {this.props.displayState !== ButtonDisplayState.Loading && this.renderNormalState()}
+        {this.props.displayState === ButtonDisplayState.Loading && this.renderLoadingState()}
+      </TouchableOpacity>
+    )
+  }
+
+  private renderNormalState = () => {
+    const styles = stylesFromProps(this.props)
+    return (
+      <>
         {this.props.icon && (
           <Image source={this.props.icon} style={[styles.icon, this.props.iconStyle]} />
         )}
-        {this.props.displayState !== ButtonDisplayState.Loading && (
-          <Text style={styles.text}>{this.props.title.toUpperCase()}</Text>
-        )}
-        {this.props.displayState === ButtonDisplayState.Loading && (
-          <ActivityIndicator color={Colors.Charcoal} style={styles.activityIndicator} />
-        )}
-      </TouchableOpacity>
+        <Text style={styles.text}>{this.props.title.toUpperCase()}</Text>
+      </>
     )
+  }
+
+  private renderLoadingState = () => {
+    const styles = stylesFromProps(this.props)
+    return <ActivityIndicator color={Colors.Charcoal} style={styles.activityIndicator} />
   }
 
   private onPress = () => {

@@ -23,6 +23,7 @@ exports[`PrimaryButton when state is disabled has a valid snapshot 1`] = `
           "alignItems": "center",
           "backgroundColor": "#14d64d",
           "borderRadius": 28,
+          "flexDirection": "row",
           "height": 50,
           "justifyContent": "center",
           "paddingHorizontal": 20,
@@ -70,6 +71,7 @@ exports[`PrimaryButton when state is loading has a valid snapshot 1`] = `
           "alignItems": "center",
           "backgroundColor": "#14d64d",
           "borderRadius": 28,
+          "flexDirection": "row",
           "height": 50,
           "justifyContent": "center",
           "paddingHorizontal": 20,
@@ -117,6 +119,7 @@ exports[`PrimaryButton when state is normal has a valid snapshot 1`] = `
           "alignItems": "center",
           "backgroundColor": "#14d64d",
           "borderRadius": 28,
+          "flexDirection": "row",
           "height": 50,
           "justifyContent": "center",
           "paddingHorizontal": 20,
@@ -125,6 +128,21 @@ exports[`PrimaryButton when state is normal has a valid snapshot 1`] = `
       ]
     }
   >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../lib/assets/images/warning.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "marginRight": 8,
+          },
+          undefined,
+        ]
+      }
+    />
     <Text
       style={
         Object {
