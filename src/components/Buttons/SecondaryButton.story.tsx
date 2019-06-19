@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { withKnobs, text, select } from '@storybook/addon-knobs'
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs'
 import { CenterPaddedDecorator } from '../../decorators'
-import { ButtonDisplayState, SecondaryButton, ButtonHeight } from '@loadsmart/blocks'
+import { ButtonDisplayState, SecondaryButton, ButtonHeight, Images } from '@loadsmart/blocks'
 import { Alert } from 'react-native'
 
 storiesOf('Buttons', module)
@@ -10,6 +10,9 @@ storiesOf('Buttons', module)
   .addDecorator(CenterPaddedDecorator)
   .add('Secondary', () => {
     const title = text('Title', 'Add Driver')
+
+    const hasIcon = boolean('Icon?', false)
+    const icon = hasIcon ? Images.PlusSign : undefined
 
     const buttonHeight = select(
       'Height',
@@ -32,6 +35,6 @@ storiesOf('Buttons', module)
 
     const onPress = () => Alert.alert('onPress')
 
-    const props = { title, displayState, buttonHeight, onPress }
+    const props = { icon, title, displayState, buttonHeight, onPress }
     return <SecondaryButton {...props} />
   })

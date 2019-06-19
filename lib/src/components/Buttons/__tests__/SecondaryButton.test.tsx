@@ -13,18 +13,6 @@ describe('SecondaryButton', () => {
     onPressCallback = jest.fn()
   })
 
-  describe('icon', () => {
-    it('renders image with icon', () => {
-      const props: ButtonProps = {
-        title: 'accept',
-        displayState: ButtonDisplayState.Normal,
-        onPress: onPressCallback,
-        buttonHeight: ButtonHeight.Regular,
-      }
-      testRenderer = renderer.create(<SecondaryButton {...props} />)
-    })
-  })
-
   describe('when state is normal', () => {
     beforeEach(() => {
       const props: ButtonProps = {
@@ -36,9 +24,11 @@ describe('SecondaryButton', () => {
       }
 
       testRenderer = renderer.create(<SecondaryButton {...props} />)
+    })
 
+    it('renders icon', () => {
       const image = testRenderer.root.findByType(Image)
-      expect(image.props['source'].testUri).toContain('plus-sign.png')
+      expect(image.props.source).toBe(Images.PlusSign)
     })
 
     it('renders title', () => {
@@ -64,12 +54,17 @@ describe('SecondaryButton', () => {
   describe('when state is loading', () => {
     beforeEach(() => {
       const props: ButtonProps = {
+        icon: Images.PlusSign,
         title: 'accept',
         displayState: ButtonDisplayState.Loading,
         onPress: onPressCallback,
         buttonHeight: ButtonHeight.Regular,
       }
       testRenderer = renderer.create(<SecondaryButton {...props} />)
+    })
+
+    it('does not render icon', () => {
+      expect(testRenderer.root.findAllByType(Image)).toHaveLength(0)
     })
 
     it('does not render title', () => {
