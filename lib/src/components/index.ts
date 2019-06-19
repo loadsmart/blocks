@@ -1,5 +1,7 @@
 export * from './Banners'
 export * from './Buttons'
+export * from './Cells'
 export * from './Dialogs'
+export * from './Icons'
 export * from './TextInputs'
 export * from './Timeline'
