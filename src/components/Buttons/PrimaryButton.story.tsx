@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react-native'
-import { text, withKnobs, select } from '@storybook/addon-knobs'
+import { text, withKnobs, select, boolean } from '@storybook/addon-knobs'
 import { CenterPaddedDecorator } from '../../decorators'
-import { PrimaryButton, ButtonDisplayState } from '@loadsmart/blocks'
+import { PrimaryButton, ButtonDisplayState, Images } from '@loadsmart/blocks'
 import { Alert } from 'react-native'
 
 storiesOf('Buttons', module)
@@ -10,6 +10,10 @@ storiesOf('Buttons', module)
   .addDecorator(CenterPaddedDecorator)
   .add('Primary', () => {
     const title = text('Title', 'Accept Offer')
+
+    const hasIcon = boolean('Icon?', false)
+    const icon = hasIcon ? Images.Warning : undefined
+
     const displayState = select(
       'State',
       {
@@ -22,6 +26,6 @@ storiesOf('Buttons', module)
 
     const onPress = () => Alert.alert('onPress')
 
-    const props = { title, displayState, onPress }
+    const props = { icon, title, displayState, onPress }
     return <PrimaryButton {...props} />
   })

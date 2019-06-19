@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { ActivityIndicator, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { ActivityIndicator, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import { Colors, Fonts } from '../../res/'
 import { ButtonProps, ButtonDisplayState } from './ButtonProps'
 
@@ -12,15 +12,25 @@ export default class PrimaryButton extends PureComponent<ButtonProps> {
     return (
       <TouchableOpacity onPress={this.onPress.bind(this)}>
         <View style={[styles.wrapper, this.props.style]}>
-          {this.props.displayState !== ButtonDisplayState.Loading && (
-            <Text style={styles.text}>{this.props.title.toUpperCase()}</Text>
-          )}
-          {this.props.displayState === ButtonDisplayState.Loading && (
-            <ActivityIndicator color={Colors.White} style={styles.activityIndicator} />
-          )}
+          {this.props.displayState !== ButtonDisplayState.Loading && this.renderNormalState()}
+          {this.props.displayState === ButtonDisplayState.Loading && this.renderLoadingState()}
         </View>
       </TouchableOpacity>
     )
+  }
+
+  private renderNormalState = () => {
+    const { icon, iconStyle, title } = this.props
+    return (
+      <>
+        {icon && <Image source={icon} style={[styles.icon, iconStyle]} />}
+        <Text style={styles.text}>{title.toUpperCase()}</Text>
+      </>
+    )
+  }
+
+  private renderLoadingState = () => {
+    return <ActivityIndicator color={Colors.White} style={styles.activityIndicator} />
   }
 
   private onPress = () => {
@@ -33,12 +43,16 @@ export default class PrimaryButton extends PureComponent<ButtonProps> {
 
 const styles = StyleSheet.create({
   wrapper: {
+    flexDirection: 'row',
     borderRadius: 28,
     height: 50,
     paddingHorizontal: 20,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Colors.AlgaeGreen,
+  },
+  icon: {
+    marginRight: 8,
   },
   text: {
     color: 'white',
