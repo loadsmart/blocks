@@ -11,7 +11,7 @@ export default class Radio extends PureComponent<Props> {
     const isSelected = this.props.selected === true
     const color = isSelected ? Colors.AlgaeGreen : Colors.Tuna
     return (
-      <View style={[styles.outerCircle, { borderColor: color }]}>
+      <View style={[styles.outerCircle, this.props.style, { borderColor: color }]}>
         {isSelected && <View style={[styles.innerCircle, { backgroundColor: color }]} />}
       </View>
     )
