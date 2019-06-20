@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioSelectCell matches snapshot when not selected 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#666666",
+        "flexDirection": "row",
+        "height": 48,
+        "paddingHorizontal": 16,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 20,
+          "justifyContent": "center",
+          "width": 20,
+        },
+        Object {
+          "marginRight": 20,
+        },
+        Object {
+          "borderColor": "#484a4c",
+        },
+      ]
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+        },
+        Object {
+          "fontFamily": "SharpSans-Medium",
+        },
+      ]
+    }
+  >
+    Walter White
+  </Text>
+</View>
+`;
+
+exports[`RadioSelectCell matches snapshot when selected 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#666666",
+        "flexDirection": "row",
+        "height": 48,
+        "paddingHorizontal": 16,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 10,
+          "borderWidth": 2,
+          "height": 20,
+          "justifyContent": "center",
+          "width": 20,
+        },
+        Object {
+          "marginRight": 20,
+        },
+        Object {
+          "borderColor": "#14d64d",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 6,
+            "height": 12,
+            "width": 12,
+          },
+          Object {
+            "backgroundColor": "#14d64d",
+          },
+        ]
+      }
+    />
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+        },
+        Object {
+          "fontFamily": "SharpSans-Bold",
+        },
+      ]
+    }
+  >
+    Walter White
+  </Text>
+</View>
+`;

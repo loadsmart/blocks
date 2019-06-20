@@ -5,7 +5,7 @@ import { RadioSelectCell } from '../Cells/index'
 interface Props extends ViewProps {
   items: string[]
   initialSelectionIndex?: number
-  onSelect: (index: number) => void
+  onSelect?: (index: number) => void
 }
 
 interface State {
@@ -47,6 +47,8 @@ export default class RadioSelector extends Component<Props, State> {
 
   private selectItemAtIndex(index: number) {
     this.setState({ ...this.state, selectedIndex: index })
-    this.props.onSelect(index)
+
+    const { onSelect } = this.props
+    onSelect && onSelect(index)
   }
 }
