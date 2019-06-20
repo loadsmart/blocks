@@ -9,5 +9,5 @@ storiesOf('Selectors', module)
   .addDecorator(StretchDecorator)
   .add('Radio Selector', () => {
     const drivers = ['Walter White', 'Jesse Pinkman', 'Gus Fring', 'Mike Ehrmantraut']
-    return <RadioSelector items={drivers} initialSelectionIndex={0} onSelect={() => {}} />
+    return <RadioSelector items={drivers} initialSelectionIndex={0} />
   })
