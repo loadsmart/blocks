@@ -12,6 +12,7 @@ exports[`Radio matches snapshot when not selected 1`] = `
         "justifyContent": "center",
         "width": 20,
       },
+      undefined,
       Object {
         "borderColor": "#484a4c",
       },
@@ -32,6 +33,7 @@ exports[`Radio matches snapshot when selected 1`] = `
         "justifyContent": "center",
         "width": 20,
       },
+      undefined,
       Object {
         "borderColor": "#14d64d",
       },
