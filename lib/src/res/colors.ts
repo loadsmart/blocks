@@ -5,6 +5,7 @@ const Colors = {
   CoralPink: '#fd576a',
   OrangePeel: '#ff9800',
   LightGray: '#d4d4d4',
+  Tuna: '#484a4c',
   VeryLightGray: '#eee',
   White: '#fff',
 }
