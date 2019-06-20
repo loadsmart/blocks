@@ -11,6 +11,7 @@ function loadStories() {
   require('./src/components/Cells/TitleValueCell.story')
   require('./src/components/Dialogs/Dialog.story')
   require('./src/components/Dialogs/DialogBox.story')
+  require('./src/components/Radios/Radio.story')
   require('./src/components/TextInputs/TextInput.story')
   require('./src/components/Timeline/TimelineItem.story')
   require('./src/components/Timeline/TimelineProgress.story')
@@ -24,6 +25,7 @@ const stories = [
   './src/components/Cells/TitleValueCell.story',
   './src/components/Dialogs/Dialog.story',
   './src/components/Dialogs/DialogBox.story',
+  './src/components/Radios/Radio.story',
   './src/components/TextInputs/TextInput.story',
   './src/components/Timeline/TimelineItem.story',
   './src/components/Timeline/TimelineProgress.story',
