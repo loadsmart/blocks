@@ -19,5 +19,8 @@
   "peerDependencies": {
     "react": "^16.6.1",
     "react-native": "^0.59.5"
+  },
+  "dependencies": {
+    "react-native-keyboard-aware-scroll-view": "^0.8.0"
   }
 }

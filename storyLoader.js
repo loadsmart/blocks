@@ -18,6 +18,7 @@ function loadStories() {
   require('./src/components/TextInputs/TextInput.story')
   require('./src/components/Timeline/TimelineItem.story')
   require('./src/components/Timeline/TimelineProgress.story')
+  require('./src/screens/EmailSignInScreen.story')
 }
 
 const stories = [
@@ -35,6 +36,7 @@ const stories = [
   './src/components/TextInputs/TextInput.story',
   './src/components/Timeline/TimelineItem.story',
   './src/components/Timeline/TimelineProgress.story',
+  './src/screens/EmailSignInScreen.story',
 ]
 
 module.exports = {
