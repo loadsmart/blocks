@@ -5,7 +5,9 @@ import { TextInput, TertiaryButton, PrimaryButton, LogoBig } from '../../compone
 import ContentAndActionWrapper from '../ContentAndActionWrapper'
 
 interface Props {
-  background: ImageSourcePropType
+  backgroundImage?: ImageSourcePropType
+  onPressSignIn?: (email: string, password: string) => void
+  onPressForgotPassword?: () => void
 }
 
 interface State {
@@ -37,21 +39,52 @@ export default class EmailSignInScreen extends Component<Props, State> {
           autoCorrect={false}
           spellCheck={false}
           style={styles.email}
+          onChangeText={val => this._onChangeText('email', val)}
         />
-        <TextInput secureTextEntry={true} placeholder={'Password'} style={styles.password} />
-        <TertiaryButton title="Forgot your password?" style={styles.forgotYourPass} />
+        <TextInput
+          secureTextEntry={true}
+          placeholder={'Password'}
+          style={styles.password}
+          onChangeText={val => this._onChangeText('password', val)}
+        />
+        <TertiaryButton
+          title="Forgot your password?"
+          style={styles.forgotYourPass}
+          onPress={this._onPressForgotPassword.bind(this)}
+        />
       </View>
     )
 
-    const actionComponent = <PrimaryButton title={'Sign in'} style={styles.loginButton} />
+    const actionComponent = (
+      <PrimaryButton
+        title={'Sign in'}
+        style={styles.loginButton}
+        onPress={this._onPressSignIn.bind(this)}
+      />
+    )
 
     return (
       <ContentAndActionWrapper
-        backgroundImage={this.props.background}
+        backgroundImage={this.props.backgroundImage}
         contentComponent={contentComponent}
         actionComponent={actionComponent}
       />
     )
+  }
+
+  private _onChangeText(input: string, value: string) {
+    this.setState({ ...this.state, [input]: value, errorMessage: undefined })
+  }
+
+  private _onPressSignIn() {
+    const { onPressSignIn } = this.props
+    const { email, password } = this.state
+    onPressSignIn && onPressSignIn(email, password)
+  }
+
+  private _onPressForgotPassword() {
+    const { onPressForgotPassword } = this.props
+    onPressForgotPassword && onPressForgotPassword()
   }
 }
 

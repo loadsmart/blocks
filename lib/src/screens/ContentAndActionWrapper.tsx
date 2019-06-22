@@ -11,7 +11,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { Fonts, Colors } from '../res'
 
 interface Props {
-  backgroundImage: ImageSourcePropType
+  backgroundImage?: ImageSourcePropType
   contentComponent: JSX.Element
   actionComponent?: JSX.Element
   scrollEnabled?: boolean
@@ -24,7 +24,7 @@ export default class ContentAndActionWrapper extends PureComponent<Props> {
     return (
       <View style={styles.container}>
         <StatusBar barStyle={'light-content'} />
-        <ImageBackground source={backgroundImage} style={styles.background} />
+        {backgroundImage && <ImageBackground source={backgroundImage} style={styles.background} />}
         <SafeAreaView style={{ flex: 1 }}>
           <KeyboardAwareScrollView
             scrollEnabled={scrollEnabled}

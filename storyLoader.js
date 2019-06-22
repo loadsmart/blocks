@@ -19,6 +19,7 @@ function loadStories() {
   require('./src/components/Timeline/TimelineItem.story')
   require('./src/components/Timeline/TimelineProgress.story')
   require('./src/screens/EmailSignInScreen.story')
+  require('./src/screens/PhoneNumberSignInScreen.story')
 }
 
 const stories = [
@@ -37,6 +38,7 @@ const stories = [
   './src/components/Timeline/TimelineItem.story',
   './src/components/Timeline/TimelineProgress.story',
   './src/screens/EmailSignInScreen.story',
+  './src/screens/PhoneNumberSignInScreen.story',
 ]
 
 module.exports = {
