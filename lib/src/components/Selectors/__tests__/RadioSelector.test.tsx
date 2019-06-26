@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { RadioSelector } from '../index'
-import { RadioSelectCell } from '../../Cells/index'
+import RadioSelector from '../RadioSelector'
+import { RadioSelectCell } from '../../Cells'
 import { TouchableWithoutFeedback } from 'react-native'
 
 describe('RadioSelector', () => {

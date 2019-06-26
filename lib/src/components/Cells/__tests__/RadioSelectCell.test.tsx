@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { RadioSelectCell } from '../index'
+import RadioSelectCell from '../RadioSelectCell'
 import { Text } from 'react-native'
 
 describe('RadioSelectCell', () => {

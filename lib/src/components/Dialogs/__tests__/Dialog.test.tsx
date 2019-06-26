@@ -4,8 +4,8 @@ import renderer from 'react-test-renderer'
 import { Dialog, DialogProps } from '../Dialog'
 import DialogBox from '../DialogBox'
 import { Images } from '../../../res'
-import { TextInput } from '../../TextInputs/index'
-import { PrimaryButton, SecondaryButton } from '../../Buttons/index'
+import { TextInput } from '../../TextInputs'
+import { PrimaryButton, SecondaryButton } from '../../Buttons'
 
 describe('Dialog', () => {
   it('renders a dialog box', () => {

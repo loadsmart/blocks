@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, ViewProps, TouchableWithoutFeedback } from 'react-native'
-import { RadioSelectCell } from '../Cells/index'
+import { RadioSelectCell } from '../Cells'
 
 interface Props extends ViewProps {
   items: string[]
