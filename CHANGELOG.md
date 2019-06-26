@@ -6,10 +6,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.7.0] - 2019-06-26
-### Changed
-- Rename index.ts to index.js files
-
 ## [0.6.0] - 2019-06-24
 ### Added
 - Welcome Story
