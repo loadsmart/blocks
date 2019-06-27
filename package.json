@@ -1,126 +1,52 @@
 {
-  "name": "example",
-  "version": "0.0.1",
-  "private": true,
-  "workspaces": [
-    "lib"
-  ],
+  "name": "@loadsmart/blocks",
+  "version": "0.7.0",
+  "description": "Loadsmart's React Native Components",
+  "license": "MIT",
+  "main": "index.ts",
   "scripts": {
-    "android": "node node_modules/react-native/local-cli/cli.js run-android",
-    "clear": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-*",
-    "deploy": "yarn workspaces run publish",
-    "hard-reset": "watchman watch-del-all && rm -rf node_modules && yarn install",
-    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
-    "prestorybook": "rnstl",
-    "prettier-write": "prettier --write",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "storybook": "storybook start -p 7007 -c .storybook",
     "test": "jest",
-    "xcode": "open ios/example.xcodeproj"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "lint:fix": "tslint -p tsconfig.json --fix",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
-  "dependencies": {
-    "@loadsmart/blocks": "*",
-    "@storybook/addon-actions": "4.0.11",
-    "@storybook/addon-knobs": "4.0.11",
-    "@storybook/addon-links": "4.0.11",
-    "@storybook/addon-ondevice-knobs": "4.1.16",
-    "@storybook/addon-ondevice-notes": "4.0.11",
-    "@storybook/addons": "4.0.11",
-    "@storybook/react-native": "4.0.11",
-    "handlebars": "^4.1.2",
-    "querystringify": ">=2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loadsmart/blocks.git"
+  },
+  "author": {
+    "name": "Gustavo Barbosa",
+    "email": "gustavo@loadsmart.com"
+  },
+  "bugs": {
+    "url": "https://github.com/loadsmart/blocks/issues"
+  },
+  "homepage": "https://github.com/loadsmart/blocks#readme",
+  "peerDependencies": {
     "react": "^16.6.1",
     "react-native": "^0.59.5"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.11",
-    "@types/react": "^16.8.8",
-    "@types/react-native": "^0.57.41",
-    "@types/react-test-renderer": "^16.8.1",
-    "@types/storybook__addon-knobs": "^5.0.0",
-    "@types/storybook__react-native": "^3.0.4",
-    "babel-core": "^6.26.3",
-    "babel-jest": "24.7.1",
-    "babel-plugin-transform-remove-console": "^6.9.4",
-    "babel-runtime": "^6.26.0",
-    "codecov": "^3.3.0",
-    "husky": "^1.3.1",
-    "jest": "^24.5.0",
-    "lint-staged": "^8.1.5",
-    "metro-react-native-babel-preset": "^0.53.1",
-    "prettier": "^1.16.4",
-    "react": "^16.6.1",
-    "react-native": "^0.59.5",
-    "react-native-storybook-loader": "^1.8.0",
+    "@types/jest": "^24.0.15",
+    "@types/react": "^16.8.22",
+    "@types/react-native": "^0.57.64",
+    "@types/react-test-renderer": "^16.8.2",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-native": "^0.59.9",
     "react-test-renderer": "^16.8.6",
-    "ts-jest": "^24.0.0",
-    "tslint": "^5.14.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^8.0.1",
-    "tslint-react": "^3.6.0",
-    "typescript": "^3.3.4000"
-  },
-  "jest": {
-    "automock": false,
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.jest.json"
-      }
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testPathIgnorePatterns": [
-      "\\.snap$",
-      "<rootDir>/node_modules/",
-      "<rootDir>/lib/node_modules/"
-    ],
-    "cacheDirectory": ".jest/cache",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "<rootDir>/lib/**/*.(ts|tsx|js)",
-      "!<rootDir>/lib/**/index.ts",
-      "!<rootDir>/node_modules/"
-    ],
-    "coveragePathIgnorePatterns": [
-      "__stories__",
-      "__fixtures__",
-      "/coverage/"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": [
-      "yarn prettier-write",
-      "git add"
-    ]
-  },
-  "rnpm": {
-    "assets": [
-      "./node_modules/@loadsmart/blocks/assets/fonts/"
-    ]
-  },
-  "config": {
-    "react-native-storybook-loader": {
-      "searchDir": [
-        "./src"
-      ],
-      "pattern": "**/*.story.tsx",
-      "outputFile": "./storyLoader.js"
-    }
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.2"
   }
 }
