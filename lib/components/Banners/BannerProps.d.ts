@@ -1,10 +1,10 @@
-import { ViewProps, ImageSourcePropType } from 'react-native';
+import { ImageSourcePropType, ViewProps } from 'react-native'
 export declare enum BannerDisplayStyle {
-    Warning = 0,
-    Error = 1
+  Warning = 0,
+  Error = 1,
 }
 export interface BannerProps extends ViewProps {
-    displayStyle?: ImageSourcePropType;
-    message: string;
-    onPress?: () => void;
+  displayStyle?: ImageSourcePropType
+  message: string
+  onPress?: () => void
 }

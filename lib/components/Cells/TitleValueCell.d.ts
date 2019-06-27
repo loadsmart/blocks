@@ -1,13 +1,13 @@
-import { ComponentProps, PureComponent } from 'react';
-import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
+import { ComponentProps, PureComponent } from 'react'
+import { ImageSourcePropType, StyleProp, TextStyle } from 'react-native'
 interface Props extends ComponentProps<any> {
-    icon?: ImageSourcePropType;
-    title: string;
-    value: string;
-    hasChevron?: boolean;
-    valueStyle?: StyleProp<TextStyle>;
+  icon?: ImageSourcePropType
+  title: string
+  value: string
+  hasChevron?: boolean
+  valueStyle?: StyleProp<TextStyle>
 }
 export default class TitleValueCell extends PureComponent<Props> {
-    render(): JSX.Element;
+  render(): JSX.Element
 }
-export {};
+export {}

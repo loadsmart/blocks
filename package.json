@@ -37,7 +37,9 @@
     "@types/react": "^16.8.22",
     "@types/react-native": "^0.57.64",
     "@types/react-test-renderer": "^16.8.2",
+    "husky": "^2.4.1",
     "jest": "^24.8.0",
+    "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-native": "^0.59.9",
@@ -48,5 +50,17 @@
     "tslint-config-standard": "^8.0.1",
     "tslint-react": "^4.0.0",
     "typescript": "^3.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "yarn format",
+      "git add"
+    ]
   }
 }
