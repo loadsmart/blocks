@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { Colors, Fonts } from '../../res/'
-import { ButtonDisplayState, ButtonHeight, ButtonProps, ButtonDisplayStyle } from './ButtonProps'
+import { ButtonDisplayState, ButtonDisplayStyle, ButtonHeight, ButtonProps } from './ButtonProps'
 
 export default class SecondaryButton extends PureComponent<ButtonProps> {
   public static defaultProps = {
