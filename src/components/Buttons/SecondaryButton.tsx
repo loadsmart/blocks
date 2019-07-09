@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { Colors, Fonts } from '../../res/'
-import { ButtonDisplayState, ButtonHeight, ButtonProps } from './ButtonProps'
+import { ButtonDisplayState, ButtonHeight, ButtonProps, ButtonDisplayStyle } from './ButtonProps'
 
 export default class SecondaryButton extends PureComponent<ButtonProps> {
   public static defaultProps = {
@@ -53,7 +53,7 @@ const stylesFromProps = (props: ButtonProps) =>
       justifyContent: 'center',
       alignItems: 'center',
       borderWidth: 1,
-      borderColor: Colors.Charcoal,
+      borderColor: props.displayStyle === ButtonDisplayStyle.Light ? Colors.White : Colors.Charcoal,
       borderRadius: props.buttonHeight ? props.buttonHeight / 2.0 : ButtonHeight.Regular / 2.0,
       paddingHorizontal: 8,
       height: props.buttonHeight ? props.buttonHeight : ButtonHeight.Regular,
@@ -65,7 +65,7 @@ const stylesFromProps = (props: ButtonProps) =>
       fontFamily: Fonts.SharpSansBold,
       fontSize: 12,
       marginLeft: 4,
-      color: Colors.Charcoal,
+      color: props.displayStyle === ButtonDisplayStyle.Light ? Colors.White : Colors.Charcoal,
     },
     activityIndicator: {
       alignSelf: 'center',

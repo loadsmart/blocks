@@ -1,15 +1,11 @@
 import React, { PureComponent } from 'react'
 import { StyleSheet, Text, TouchableOpacity, ViewProps } from 'react-native'
 import { Colors, Fonts } from '../../res/'
-
-export enum TertiaryButtonDisplayStyle {
-  Dark,
-  Light,
-}
+import { ButtonDisplayStyle } from './ButtonProps'
 
 interface Props extends ViewProps {
   title: string
-  displayStyle?: TertiaryButtonDisplayStyle
+  displayStyle?: ButtonDisplayStyle
   onPress?: () => void
 }
 
@@ -27,10 +23,9 @@ export default class TertiaryButton extends PureComponent<Props> {
 }
 
 const stylesFromProps = (props: Props) => {
-  const isLight = props.displayStyle === TertiaryButtonDisplayStyle.Light
   return StyleSheet.create({
     title: {
-      color: isLight ? Colors.White : Colors.Charcoal,
+      color: props.displayStyle === ButtonDisplayStyle.Light ? Colors.White : Colors.Charcoal,
       textDecorationLine: 'underline',
       fontFamily: Fonts.SharpSansMedium,
       fontSize: 14,
