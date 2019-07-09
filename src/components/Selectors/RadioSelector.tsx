@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { TouchableWithoutFeedback, View, ViewProps } from 'react-native'
+import React, { Component, PureComponent } from 'react'
+import { FlatList, TouchableWithoutFeedback, View, ViewProps } from 'react-native'
+import { Colors } from '../../res'
 import { RadioSelectCell } from '../Cells'
 
 interface Props extends ViewProps {
@@ -20,21 +21,30 @@ export default class RadioSelector extends Component<Props, State> {
 
   public render() {
     return (
-      <View style={this.props.style}>
-        {this.props.items.map((item, index) => {
-          return (
-            <TouchableWithoutFeedback
-              key={index}
-              onPress={this.selectItemAtIndex.bind(this, index)}
-            >
-              <View>
-                <RadioSelectCell title={item} selected={this.isItemSelected(index)} />
-              </View>
-            </TouchableWithoutFeedback>
-          )
-        })}
-      </View>
+      <FlatList
+        data={this.props.items}
+        keyExtractor={(_, index) => `${index}`}
+        extraData={this.state}
+        renderItem={this.renderItem.bind(this)}
+        showsVerticalScrollIndicator={false}
+        style={this.props.style}
+        ItemSeparatorComponent={this.renderSeparator.bind(this)}
+      />
     )
+  }
+
+  private renderItem({ index, item }: { index: number; item: string }) {
+    return (
+      <TouchableWithoutFeedback key={index} onPress={this.selectItemAtIndex.bind(this, index)}>
+        <View>
+          <RadioSelectCell title={item} selected={this.isItemSelected(index)} />
+        </View>
+      </TouchableWithoutFeedback>
+    )
+  }
+
+  private renderSeparator() {
+    return <View style={{ backgroundColor: Colors.LightGray, height: 0.5, width: '100%' }} />
   }
 
   private isItemSelected(index: number) {
