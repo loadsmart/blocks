@@ -2,7 +2,7 @@ import React from 'react'
 import { ActivityIndicator, Text, TouchableOpacity, Image } from 'react-native'
 import renderer from 'react-test-renderer'
 import SecondaryButton from '../SecondaryButton'
-import { ButtonDisplayState, ButtonProps, ButtonHeight } from '../ButtonProps'
+import { ButtonDisplayState, ButtonProps, ButtonHeight, ButtonDisplayStyle } from '../ButtonProps'
 import { Images } from '../../../res/'
 
 describe('SecondaryButton', () => {
@@ -136,5 +136,21 @@ describe('SecondaryButton', () => {
       testRenderer = renderer.create(<SecondaryButton title={'test'} />)
       expect(testRenderer.toJSON()).toMatchSnapshot()
     })
+  })
+
+  it('renders for style dark', () => {
+    testRenderer = renderer.create(
+      <SecondaryButton title={'Cancel'} displayStyle={ButtonDisplayStyle.Dark} />
+    )
+
+    expect(testRenderer.toJSON).toMatchSnapshot()
+  })
+
+  it('renders for style light', () => {
+    testRenderer = renderer.create(
+      <SecondaryButton title={'Cancel'} displayStyle={ButtonDisplayStyle.Light} />
+    )
+
+    expect(testRenderer.toJSON).toMatchSnapshot()
   })
 })

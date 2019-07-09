@@ -1,7 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import TertiaryButton, { TertiaryButtonDisplayStyle } from '../TertiaryButton'
+import TertiaryButton from '../TertiaryButton'
 import { Text, TouchableOpacity } from 'react-native'
+import { ButtonDisplayStyle } from '../ButtonProps'
 
 describe('TertiaryButton', () => {
   it('renders title', () => {
@@ -23,7 +24,7 @@ describe('TertiaryButton', () => {
 
   it('renders for style dark', () => {
     const testRenderer = renderer.create(
-      <TertiaryButton title={'Skip'} displayStyle={TertiaryButtonDisplayStyle.Dark} />
+      <TertiaryButton title={'Skip'} displayStyle={ButtonDisplayStyle.Dark} />
     )
 
     expect(testRenderer.toJSON).toMatchSnapshot()
@@ -31,7 +32,7 @@ describe('TertiaryButton', () => {
 
   it('renders for style light', () => {
     const testRenderer = renderer.create(
-      <TertiaryButton title={'Skip'} displayStyle={TertiaryButtonDisplayStyle.Light} />
+      <TertiaryButton title={'Skip'} displayStyle={ButtonDisplayStyle.Light} />
     )
 
     expect(testRenderer.toJSON).toMatchSnapshot()

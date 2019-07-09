@@ -117,6 +117,10 @@ exports[`SecondaryButton height has snapshot for type undefined 1`] = `
 </View>
 `;
 
+exports[`SecondaryButton renders for style dark 1`] = `[Function]`;
+
+exports[`SecondaryButton renders for style light 1`] = `[Function]`;
+
 exports[`SecondaryButton when state is disabled has a valid snapshot 1`] = `
 <View
   accessible={true}
