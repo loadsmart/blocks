@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Ability to display SecondaryButton and TertiaryButton in dark and light versions
+
+## [0.6.0] - 2019-06-24
+### Added
+- Welcome Story
 - Radio Button
 - Radio Select Cell
 - Radio Selector

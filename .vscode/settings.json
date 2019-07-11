@@ -1,8 +1,5 @@
 {
     "editor.formatOnSave": true,
-    "cSpell.words": [
-        "xcodeproj"
-    ],
     "[typescript]": {
         "editor.tabSize": 2
     },

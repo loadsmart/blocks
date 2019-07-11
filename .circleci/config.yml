@@ -44,54 +44,18 @@ jobs:
           command: ./node_modules/codecov/bin/codecov
 
   distribute_ios:
-    macos:
-      xcode: "10.2.0"
     working_directory: ~/blocks
-
+    docker:
+        - image: circleci/node:11.10.1
+    
     # use a --login shell so our "set Ruby version" command gets picked up for later steps
     shell: /bin/bash --login -o pipefail
 
     steps:
-      - checkout
-
       - run:
-          name: set Ruby version
-          command:  echo "ruby-2.4" > ~/.ruby-version
+          name: Trigger blocks-storybook-app build
+          command: echo "TODO Trigger blocks-storybook-app build"
 
-      - restore_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
-
-      - restore_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-
-      - run: yarn install
-
-      - save_cache:
-          key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
-          paths:
-            - ~/.cache/yarn
-
-      - save_cache:
-          key: node-v1-{{ checksum "package.json" }}-{{ arch }}
-          paths:
-            - node_modules
-
-      - restore_cache:
-          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
-
-      - run:
-          command: bundle install
-          working_directory: ios
-
-      - save_cache:
-          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
-          paths:
-            - vendor/bundle
-
-      - run:
-          name: Send sample app to Testflight
-          command: bundle exec fastlane ios testflight
-          working_directory: ios
 
 workflows:
   version: 2
