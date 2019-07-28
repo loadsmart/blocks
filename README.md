@@ -9,6 +9,7 @@ Loadsmart's React Native Components
 
 ```
 $ yarn add @loadsmart/blocks
+$ react-native link @loadsmart/blocks
 ```
 
 
