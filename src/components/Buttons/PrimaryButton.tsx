@@ -1,30 +1,35 @@
 import React, { PureComponent } from 'react'
 import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { Colors, Fonts } from '../../res/'
-import { ThemeProviderProps } from '../Providers'
+import { Theme, ThemeContext } from '../Contexts'
 import { ButtonDisplayState, ButtonProps } from './ButtonProps'
 
-type PrimaryButtonProps = ButtonProps & ThemeProviderProps
-
-export default class PrimaryButton extends PureComponent<PrimaryButtonProps> {
+export default class PrimaryButton extends PureComponent<ButtonProps> {
   public static defaultProps = {
     displayState: ButtonDisplayState.Normal,
   }
 
   public render() {
-    const styles = stylesFromProps(this.props)
     return (
-      <TouchableOpacity onPress={this.onPress.bind(this)}>
-        <View style={[styles.wrapper, this.props.style]}>
-          {this.props.displayState !== ButtonDisplayState.Loading && this.renderNormalState()}
-          {this.props.displayState === ButtonDisplayState.Loading && this.renderLoadingState()}
-        </View>
-      </TouchableOpacity>
+      <ThemeContext.Consumer>
+        {theme => {
+          const styles = themedStyles(theme)
+          return (
+            <TouchableOpacity onPress={this.onPress.bind(this)}>
+              <View style={[styles.wrapper, this.props.style]}>
+                {this.props.displayState !== ButtonDisplayState.Loading &&
+                  this.renderNormalState(styles)}
+                {this.props.displayState === ButtonDisplayState.Loading &&
+                  this.renderLoadingState(styles)}
+              </View>
+            </TouchableOpacity>
+          )
+        }}
+      </ThemeContext.Consumer>
     )
   }
 
-  private renderNormalState = () => {
-    const styles = stylesFromProps(this.props)
+  private renderNormalState = (styles: any) => {
     const { icon, iconStyle, title } = this.props
     return (
       <>
@@ -34,8 +39,7 @@ export default class PrimaryButton extends PureComponent<PrimaryButtonProps> {
     )
   }
 
-  private renderLoadingState = () => {
-    const styles = stylesFromProps(this.props)
+  private renderLoadingState = (styles: any) => {
     return <ActivityIndicator color={Colors.White} style={styles.activityIndicator} />
   }
 
@@ -47,8 +51,7 @@ export default class PrimaryButton extends PureComponent<PrimaryButtonProps> {
   }
 }
 
-const stylesFromProps = (props: PrimaryButtonProps) => {
-  const themedColor = props.theme && props.theme.primaryColor
+const themedStyles = (theme: Partial<Theme>) => {
   return StyleSheet.create({
     wrapper: {
       flexDirection: 'row',
@@ -57,7 +60,7 @@ const stylesFromProps = (props: PrimaryButtonProps) => {
       paddingHorizontal: 20,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: themedColor || Colors.AlgaeGreen,
+      backgroundColor: theme.primaryColor,
     },
     icon: {
       marginRight: 8,
