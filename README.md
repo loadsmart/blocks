@@ -12,6 +12,41 @@ $ yarn add @loadsmart/blocks
 $ react-native link @loadsmart/blocks
 ```
 
+## Usage
+
+### Basic
+
+```tsx
+import { Text, View } from 'react-native'
+import { PrimaryButton } from '@loadsmart/blocks'
+
+const MyComponent = () => (
+  <View>
+    <Text>Are you sure?</Text>
+    <PrimaryButton title='Confirm' />
+  </View>
+)
+```
+
+### Theming
+
+```tsx
+import { Text, View } from 'react-native'
+import { PrimaryButton, Theme, ThemeContext } from '@loadsmart/blocks'
+
+const customTheme: Theme = {
+  primaryColor: '#18515E'
+}
+
+const MyComponent = () => (
+  <ThemeContext.Provider theme={customTheme}>
+    <View>
+      <Text>Are you sure?</Text>
+      <PrimaryButton title='Confirm' />
+    </View>
+  </ThemeContext>
+)
+```
 
 ## Testing
 
