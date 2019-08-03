@@ -54,3 +54,10 @@ const MyComponent = () => (
 yarn test
 ```
 
+## Storybook
+
+If you want to take a look and play with the components in this repo, we have a [showcase app](https://github.com/loadsmart/blocks-storybook-app) made with React Native.
+
+## License
+
+[MIT](./LICENSE)
