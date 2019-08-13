@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, TextInput as RNTextInput, TextInputProps } from 'react-native'
 import { Colors, Fonts } from '../../res/'
+import { ThemeContext } from '../Contexts'
 
 interface Props extends TextInputProps {}
 
@@ -17,16 +18,22 @@ export default class TextInput extends Component<Props, State> {
   }
 
   public render() {
-    const borderStyle = this.state.focused
-      ? { borderColor: Colors.AlgaeGreen }
-      : { borderColor: Colors.White }
     return (
-      <RNTextInput
-        {...this.props}
-        style={[styles.textInput, this.props.style, borderStyle]}
-        onFocus={this.onFocus.bind(this)}
-        onBlur={this.onBlur.bind(this)}
-      />
+      <ThemeContext.Consumer>
+        {theme => {
+          const borderStyle = this.state.focused
+            ? { borderColor: theme.primaryColor }
+            : { borderColor: Colors.White }
+          return (
+            <RNTextInput
+              {...this.props}
+              style={[styles.textInput, this.props.style, borderStyle]}
+              onFocus={this.onFocus.bind(this)}
+              onBlur={this.onBlur.bind(this)}
+            />
+          )
+        }}
+      </ThemeContext.Consumer>
     )
   }
 
