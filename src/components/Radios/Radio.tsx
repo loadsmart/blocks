@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { StyleSheet, View, ViewProps } from 'react-native'
 import { Colors } from '../../res'
+import { ThemeContext } from '../Contexts'
 
 interface Props extends ViewProps {
   selected?: boolean
@@ -8,12 +9,18 @@ interface Props extends ViewProps {
 
 export default class Radio extends PureComponent<Props> {
   public render() {
-    const isSelected = this.props.selected === true
-    const color = isSelected ? Colors.AlgaeGreen : Colors.Tuna
     return (
-      <View style={[styles.outerCircle, this.props.style, { borderColor: color }]}>
-        {isSelected && <View style={[styles.innerCircle, { backgroundColor: color }]} />}
-      </View>
+      <ThemeContext.Consumer>
+        {theme => {
+          const isSelected = this.props.selected === true
+          const color = isSelected ? theme.primaryColor : Colors.Tuna
+          return (
+            <View style={[styles.outerCircle, this.props.style, { borderColor: color }]}>
+              {isSelected && <View style={[styles.innerCircle, { backgroundColor: color }]} />}
+            </View>
+          )
+        }}
+      </ThemeContext.Consumer>
     )
   }
 }
