@@ -3,13 +3,19 @@ import { StyleSheet, TextInput as RNTextInput, TextInputProps } from 'react-nati
 import { Colors, Fonts } from '../../res/'
 import { ThemeContext } from '../Contexts'
 
-interface Props extends TextInputProps {}
+interface Props extends TextInputProps {
+  focusable?: boolean
+}
 
 interface State {
   focused: boolean
 }
 
 export default class TextInput extends Component<Props, State> {
+  public static defaultProps: Props = {
+    focusable: true,
+  }
+
   constructor(props: Props, state: State) {
     super(props, state)
     this.state = {
@@ -21,9 +27,10 @@ export default class TextInput extends Component<Props, State> {
     return (
       <ThemeContext.Consumer>
         {theme => {
-          const borderStyle = this.state.focused
-            ? { borderColor: theme.primaryColor }
-            : { borderColor: Colors.White }
+          const borderStyle =
+            this.props.focusable === true && this.state.focused === true
+              ? { borderColor: theme.primaryColor }
+              : { borderColor: Colors.White }
           return (
             <RNTextInput
               {...this.props}

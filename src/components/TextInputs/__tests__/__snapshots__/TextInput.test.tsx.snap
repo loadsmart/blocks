@@ -1,8 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextInput renders with green border when on focus 1`] = `
+exports[`TextInput when focusable is false also renders with white border when on focus 1`] = `
 <TextInput
   allowFontScaling={true}
+  focusable={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 26,
+        "borderWidth": 2,
+        "color": "#3c3d3a",
+        "fontFamily": "SharpSans-Semibold",
+        "fontSize": 16,
+        "height": 52,
+        "paddingHorizontal": 28,
+      },
+      undefined,
+      Object {
+        "borderColor": "#fff",
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`TextInput when focusable is false renders with white border when on blur 1`] = `
+<TextInput
+  allowFontScaling={true}
+  focusable={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 26,
+        "borderWidth": 2,
+        "color": "#3c3d3a",
+        "fontFamily": "SharpSans-Semibold",
+        "fontSize": 16,
+        "height": 52,
+        "paddingHorizontal": 28,
+      },
+      undefined,
+      Object {
+        "borderColor": "#fff",
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`TextInput when focusable is true renders with green border when on focus 1`] = `
+<TextInput
+  allowFontScaling={true}
+  focusable={true}
   onBlur={[Function]}
   onFocus={[Function]}
   rejectResponderTermination={true}
@@ -28,9 +87,10 @@ exports[`TextInput renders with green border when on focus 1`] = `
 />
 `;
 
-exports[`TextInput renders with white border when on blur 1`] = `
+exports[`TextInput when focusable is true renders with white border when on blur 1`] = `
 <TextInput
   allowFontScaling={true}
+  focusable={true}
   onBlur={[Function]}
   onFocus={[Function]}
   rejectResponderTermination={true}
