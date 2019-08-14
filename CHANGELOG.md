@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.14.0] - 2019-08-13
+### Added
+- Support for themes for text input, radio button and timeline
+
 ## [0.13.0] - 2019-07-30
 ### Added
 - Support for themes
