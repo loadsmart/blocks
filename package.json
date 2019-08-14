@@ -37,12 +37,6 @@
     "lib/**/*",
     "assets/**/*"
   ],
-  "rnpm": {
-    "assets": [
-      "assets/fonts",
-      "assets/images"
-    ]
-  },
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.22",
