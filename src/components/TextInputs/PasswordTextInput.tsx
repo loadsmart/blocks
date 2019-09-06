@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { Colors, Fonts, Images, Dimens } from '../../res'
+import { Colors, Fonts, Images } from '../../res'
 import { ThemeContext } from '../Contexts'
 
 interface Props extends TextInputProps {
