@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.SharpSansSemibold,
     fontSize: 16,
     color: Colors.Charcoal,
+    borderWidth: 2,
   },
   textInput: {
     flex: 1,
