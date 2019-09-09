@@ -43,11 +43,11 @@ export default class PasswordTextInput extends Component<Props, State> {
           return (
             <View style={[this.props, styles.container, this.props.style, borderStyle]}>
               <RNTextInput
+                {...this.props}
                 style={styles.textInput}
                 onFocus={this.onFocus.bind(this)}
                 onBlur={this.onBlur.bind(this)}
                 secureTextEntry={!this.state.passwordVisible}
-                onChangeText={this.props.onChangeText}
               />
               <TouchableOpacity
                 onPress={() => this.setState({ passwordVisible: !this.state.passwordVisible })}
