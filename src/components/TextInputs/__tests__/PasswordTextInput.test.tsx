@@ -1,6 +1,7 @@
 import React from 'react'
-import { TextInput as RNTextInput, TouchableOpacity } from 'react-native'
+import { Image, TextInput as RNTextInput, TouchableOpacity } from 'react-native'
 import renderer from 'react-test-renderer'
+import { Images } from '../../../res'
 import PasswordTextInput from '../PasswordTextInput'
 
 describe('PasswordTextInput', () => {
@@ -37,18 +38,16 @@ describe('PasswordTextInput', () => {
   })
 
   describe('when password toggle is clicked', () => {
-    it('correctly sets passwordVisible state', () => {
-      const testRenderer = renderer.create(<PasswordTextInput focusable />)
-      const instance = testRenderer.root.instance
+    it('renders password icons', () => {
+      const testRenderer = renderer.create(<PasswordTextInput focusable={true} />)
       const toggle = testRenderer.root.findByType(TouchableOpacity)
+      const image = testRenderer.root.findByType(Image)
 
       toggle.instance.props.onPress()
-      const passwordShow = instance.state.passwordVisible
-      toggle.instance.props.onPress()
-      const passwordHide = instance.state.passwordVisible
+      expect(image.props.source).toBe(Images.PasswordShow)
 
-      expect(passwordShow).toBeTruthy()
-      expect(passwordHide).toBeFalsy()
+      toggle.instance.props.onPress()
+      expect(image.props.source).toBe(Images.PasswordHide)
     })
   })
 })
