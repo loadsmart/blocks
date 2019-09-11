@@ -20,14 +20,14 @@ interface State {
   focused: boolean
 }
 
+const digitRegex = '^\\d$'
+
 export default class NumberInput extends PureComponent<Props, State> {
   private textInput: TextInput | null
-  private digitRegex: string
 
   constructor(props: Props, state: State) {
     super(props, state)
     this.textInput = null
-    this.digitRegex = '^\\d$'
     this.state = {
       focused: false,
     }
@@ -62,7 +62,7 @@ export default class NumberInput extends PureComponent<Props, State> {
   }
 
   public onChangeText = (text: string) => {
-    if (text.match(this.digitRegex)) {
+    if (text.match(digitRegex)) {
       this.props.onChangeText(text)
     }
   }
@@ -85,7 +85,7 @@ export default class NumberInput extends PureComponent<Props, State> {
 
   public onKeyPress = (event: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
     const key = event.nativeEvent.key
-    if (key.match(this.digitRegex)) {
+    if (key.match(digitRegex)) {
       this.props.onChangeText(key)
     } else if (key.match('Backspace')) {
       this.props.onChangeText('')
