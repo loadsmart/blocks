@@ -12,6 +12,8 @@ interface State {
   focused: boolean
 }
 
+const numberOfDigits = 6
+
 export default class PinCodeTextInput extends Component<Props, State> {
   private inputRefs: NumberInput[]
 
@@ -19,7 +21,7 @@ export default class PinCodeTextInput extends Component<Props, State> {
     super(props, state)
     this.inputRefs = []
     this.state = {
-      digits: ['', '', '', '', '', ''],
+      digits: [...Array(numberOfDigits)].map(_ => ''),
       focused: false,
     }
   }
@@ -37,7 +39,7 @@ export default class PinCodeTextInput extends Component<Props, State> {
   public render() {
     return (
       <View style={styles.pinNumbersContainer}>
-        {[0, 1, 2, 3, 4, 5].map(i => (
+        {[...Array(numberOfDigits).keys()].map(i => (
           <NumberInput
             {...this.props}
             key={i}

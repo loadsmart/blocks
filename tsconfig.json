@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "downlevelIteration": true,
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
@@ -7,7 +8,7 @@
     "strict": true,
     "jsx": "react",
     "esModuleInterop": true,
-    "lib": [ "es6" ]
+    "lib": ["es6"]
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
