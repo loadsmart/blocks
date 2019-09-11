@@ -59,8 +59,7 @@ export default class PinCodeTextInput extends Component<Props, State> {
   }
 
   public updatePinCodeInputFocus = (index: number, inputRefs: NumberInput[], text: string) => {
-    if (text.length === 0) {
-      if (index === 0) return
+    if (text.length === 0 && index !== 0) {
       inputRefs[index - 1].focus()
       inputRefs[index].blur()
     } else {
