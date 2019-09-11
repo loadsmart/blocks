@@ -13,7 +13,6 @@ import { ThemeContext } from '../Contexts'
 interface Props extends TextInputProps {
   onChangeText: (text: string) => void
   digit?: string
-  focus?: boolean
 }
 
 interface State {
