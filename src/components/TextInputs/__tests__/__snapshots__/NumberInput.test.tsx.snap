@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberInput render renders with gray border when blurred 1`] = `
+<TextInput
+  allowFontScaling={true}
+  blurOnSubmit={false}
+  caretHidden={true}
+  keyboardType="number-pad"
+  maxLength={1}
+  onBlur={[Function]}
+  onChangeText={[Function]}
+  onFocus={[Function]}
+  onKeyPress={[Function]}
+  rejectResponderTermination={true}
+  selectionColor="#00000000"
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderWidth": 2,
+        "fontSize": 20,
+        "height": 63,
+        "marginHorizontal": 4,
+        "textAlign": "center",
+        "width": 45,
+      },
+      Object {
+        "borderColor": "#c4ccd6",
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`NumberInput render renders with green border when focused 1`] = `
+<TextInput
+  allowFontScaling={true}
+  blurOnSubmit={false}
+  caretHidden={true}
+  keyboardType="number-pad"
+  maxLength={1}
+  onBlur={[Function]}
+  onChangeText={[Function]}
+  onFocus={[Function]}
+  onKeyPress={[Function]}
+  rejectResponderTermination={true}
+  selectionColor="#00000000"
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderWidth": 2,
+        "fontSize": 20,
+        "height": 63,
+        "marginHorizontal": 4,
+        "textAlign": "center",
+        "width": 45,
+      },
+      Object {
+        "borderColor": "#14d64d",
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;

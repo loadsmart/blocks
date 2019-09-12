@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PinCodeTextInput render renders all number inputs with a digit if auth code prop is defined 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="1"
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="2"
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="3"
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="4"
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="5"
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="6"
+  />
+</View>
+`;
+
+exports[`PinCodeTextInput render renders all number inputs with a empty value if auth code prop is undefined 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+  <TextInput
+    allowFontScaling={true}
+    blurOnSubmit={false}
+    caretHidden={true}
+    keyboardType="number-pad"
+    maxLength={1}
+    onBlur={[Function]}
+    onChangeText={[Function]}
+    onFocus={[Function]}
+    onKeyPress={[Function]}
+    rejectResponderTermination={true}
+    selectionColor="#00000000"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderWidth": 2,
+          "fontSize": 20,
+          "height": 63,
+          "marginHorizontal": 4,
+          "textAlign": "center",
+          "width": 45,
+        },
+        Object {
+          "borderColor": "#c4ccd6",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+</View>
+`;

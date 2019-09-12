@@ -9,6 +9,8 @@ const Colors = {
   Tuna: '#484a4c',
   VeryLightGray: '#eee',
   White: '#fff',
+  Ghost: '#c4ccd6',
+  Transparent: '#00000000',
 }
 
 export default Colors
