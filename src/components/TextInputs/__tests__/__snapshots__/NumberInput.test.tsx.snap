@@ -27,6 +27,7 @@ exports[`NumberInput render renders with gray border when blurred 1`] = `
       Object {
         "borderColor": "#c4ccd6",
       },
+      undefined,
     ]
   }
   underlineColorAndroid="transparent"
@@ -60,6 +61,7 @@ exports[`NumberInput render renders with green border when focused 1`] = `
       Object {
         "borderColor": "#14d64d",
       },
+      undefined,
     ]
   }
   underlineColorAndroid="transparent"

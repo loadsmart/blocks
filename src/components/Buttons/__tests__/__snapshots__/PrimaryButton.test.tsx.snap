@@ -36,9 +36,10 @@ exports[`PrimaryButton when state is disabled has a valid snapshot 1`] = `
       style={
         Object {
           "alignSelf": "center",
-          "color": "white",
+          "color": "#fff",
           "fontFamily": "SharpSans-Extrabold",
           "fontSize": 15,
+          "fontWeight": "normal",
         }
       }
     >
@@ -88,6 +89,7 @@ exports[`PrimaryButton when state is loading has a valid snapshot 1`] = `
       style={
         Object {
           "alignSelf": "center",
+          "color": "#fff",
           "position": "absolute",
         }
       }
@@ -147,9 +149,10 @@ exports[`PrimaryButton when state is normal has a valid snapshot 1`] = `
       style={
         Object {
           "alignSelf": "center",
-          "color": "white",
+          "color": "#fff",
           "fontFamily": "SharpSans-Extrabold",
           "fontSize": 15,
+          "fontWeight": "normal",
         }
       }
     >

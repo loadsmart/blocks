@@ -1,9 +1,9 @@
 import React from 'react'
-import { ActivityIndicator, Text, TouchableOpacity, Image } from 'react-native'
+import { ActivityIndicator, Text, TouchableOpacity, Image, ViewStyle } from 'react-native'
 import renderer from 'react-test-renderer'
 import PrimaryButton from '../PrimaryButton'
 import { ButtonDisplayState, ButtonProps } from '../ButtonProps'
-import { Images } from '../../../res'
+import { Images, Colors } from '../../../res'
 
 describe('PrimaryButton', () => {
   describe('when state is normal', () => {
@@ -16,6 +16,7 @@ describe('PrimaryButton', () => {
         title: 'accept',
         displayState: ButtonDisplayState.Normal,
         onPress: onPressCallback,
+        style: undefined,
       }
       testRenderer = renderer.create(<PrimaryButton {...props} />)
     })
@@ -42,6 +43,28 @@ describe('PrimaryButton', () => {
 
     it('has a valid snapshot', () => {
       expect(testRenderer.toJSON()).toMatchSnapshot()
+    })
+
+    it('renders button text with custom style', () => {
+      const style = {
+        color: Colors.White,
+        fontSize: 12,
+        fontWeight: 'bold',
+      }
+      const props = {
+        icon: Images.Warning,
+        title: 'accept',
+        displayState: ButtonDisplayState.Normal,
+        onPress: onPressCallback,
+        style: style,
+      } as ButtonProps
+
+      testRenderer = renderer.create(<PrimaryButton {...props} />)
+      const text = testRenderer.root.findByType(Text)
+
+      expect(text.props.style.color).toBe(style.color)
+      expect(text.props.style.fontSize).toBe(style.fontSize)
+      expect(text.props.style.fontWeight).toBe(style.fontWeight)
     })
   })
 
@@ -78,6 +101,23 @@ describe('PrimaryButton', () => {
 
     it('has a valid snapshot', () => {
       expect(testRenderer.toJSON()).toMatchSnapshot()
+    })
+
+    it('renders activity indicator with custom spinner color', () => {
+      const style = {
+        color: Colors.DarkGrey,
+      }
+      const props = {
+        title: 'accept',
+        displayState: ButtonDisplayState.Loading,
+        onPress: onPressCallback,
+        style: style,
+      } as ButtonProps
+
+      testRenderer = renderer.create(<PrimaryButton {...props} />)
+      const activityIndicator = testRenderer.root.findByType(ActivityIndicator)
+
+      expect(activityIndicator.props.style.color).toBe(style.color)
     })
   })
 
