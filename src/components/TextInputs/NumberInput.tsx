@@ -45,7 +45,7 @@ export default class NumberInput extends PureComponent<Props, State> {
               keyboardType={Platform.OS === 'ios' ? 'number-pad' : 'default'}
               maxLength={1}
               selectionColor={Colors.Transparent}
-              style={[styles.container, borderStyle]}
+              style={[styles.container, borderStyle, this.props.style]}
               onChangeText={this.onChangeText}
               onBlur={this.onBlur}
               onFocus={this.onFocus}

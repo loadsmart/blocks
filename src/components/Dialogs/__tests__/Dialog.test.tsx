@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Text } from 'react-native'
+import { Image, Text, ButtonProps } from 'react-native'
 import renderer from 'react-test-renderer'
 import { Dialog, DialogProps } from '../Dialog'
 import DialogBox from '../DialogBox'
@@ -51,10 +51,13 @@ describe('Dialog', () => {
   })
 
   it('renders buttons if passed as prop', () => {
+    const buttonProps: any = {
+      style: { color: 'white' },
+    }
     const props: DialogProps = {
       buttons: (
         <>
-          <PrimaryButton title={'Confirm'} />
+          <PrimaryButton title={'Confirm'} {...buttonProps} />
           <SecondaryButton title={'Cancel'} />
         </>
       ),
