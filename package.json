@@ -1,6 +1,6 @@
 {
   "name": "@loadsmart/blocks",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Loadsmart's React Native Components",
   "license": "MIT",
   "main": "lib/index.js",
