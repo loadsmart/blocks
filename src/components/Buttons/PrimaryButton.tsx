@@ -13,7 +13,7 @@ export default class PrimaryButton extends PureComponent<ButtonProps> {
     return (
       <ThemeContext.Consumer>
         {theme => {
-          const styles = themedStyles(theme)
+          const styles = themedStyles(theme, this.props.style)
           return (
             <TouchableOpacity onPress={this.onPress.bind(this)}>
               <View style={[styles.wrapper, this.props.style]}>
@@ -40,7 +40,9 @@ export default class PrimaryButton extends PureComponent<ButtonProps> {
   }
 
   private renderLoadingState = (styles: any) => {
-    return <ActivityIndicator color={Colors.White} style={styles.activityIndicator} />
+    return (
+      <ActivityIndicator color={styles.activityIndicator.color} style={styles.activityIndicator} />
+    )
   }
 
   private onPress = () => {
@@ -51,7 +53,7 @@ export default class PrimaryButton extends PureComponent<ButtonProps> {
   }
 }
 
-const themedStyles = (theme: Partial<Theme>) => {
+const themedStyles = (theme: Partial<Theme>, style: any) => {
   return StyleSheet.create({
     wrapper: {
       flexDirection: 'row',
@@ -66,14 +68,16 @@ const themedStyles = (theme: Partial<Theme>) => {
       marginRight: 8,
     },
     text: {
-      color: 'white',
-      fontFamily: Fonts.SharpSansExtrabold,
-      fontSize: 15,
       alignSelf: 'center',
+      fontFamily: Fonts.SharpSansExtrabold,
+      color: style && style.color ? style.color : Colors.White,
+      fontSize: style && style.fontSize ? style.fontSize : 15,
+      fontWeight: style && style.fontWeight ? style.fontWeight : 'normal',
     },
     activityIndicator: {
       alignSelf: 'center',
       position: 'absolute',
+      color: style && style.color ? style.color : Colors.White,
     },
   })
 }
