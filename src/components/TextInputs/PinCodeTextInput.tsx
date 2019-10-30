@@ -61,12 +61,17 @@ export default class PinCodeTextInput extends Component<Props, State> {
   }
 
   public updatePinCodeInputFocus = (index: number, inputRefs: NumberInput[], text: string) => {
-    if (text.length === 0 && index > 0) {
-      inputRefs[index - 1].focus()
+    const isDeleting = text.length === 0
+    if (isDeleting) {
       inputRefs[index].blur()
+      if (index > 0) {
+        inputRefs[index - 1].focus()
+      }
     } else {
       inputRefs[index].blur()
-      if (index !== inputRefs.length - 1) inputRefs[index + 1].focus()
+      if (index !== inputRefs.length - 1) {
+        inputRefs[index + 1].focus()
+      }
     }
   }
 }
