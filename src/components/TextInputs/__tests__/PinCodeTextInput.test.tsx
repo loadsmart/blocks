@@ -98,7 +98,7 @@ describe('PinCodeTextInput', () => {
       expect(inputRefs[1].blur).toHaveBeenCalled()
     })
 
-    it('blurs the current number input if it is the first and is deleting', () => {
+    it('neither blurs not focus the current number input if it is the first and is deleting', () => {
       const testRenderer = renderer.create(<PinCodeTextInput onChangeInput={onChangeInput} />)
       const inputRefs = [
         {
@@ -111,7 +111,11 @@ describe('PinCodeTextInput', () => {
         },
       ]
       testRenderer.root.instance.updatePinCodeInputFocus(0, inputRefs, '')
-      expect(inputRefs[0].blur).toHaveBeenCalled()
+
+      expect(inputRefs[0].blur).not.toHaveBeenCalled()
+      expect(inputRefs[0].focus).not.toHaveBeenCalled()
+
+      expect(inputRefs[1].blur).not.toHaveBeenCalled()
       expect(inputRefs[1].focus).not.toHaveBeenCalled()
     })
 
