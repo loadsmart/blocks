@@ -13,6 +13,7 @@ import { ThemeContext } from '../Contexts'
 interface Props extends TextInputProps {
   onChangeText: (text: string) => void
   digit?: string
+  shouldReadOneTimeCode?: boolean
 }
 
 interface State {
@@ -43,6 +44,9 @@ export default class NumberInput extends PureComponent<Props, State> {
             <TextInput
               ref={component => (this.textInput = component)}
               keyboardType={Platform.OS === 'ios' ? 'number-pad' : 'default'}
+              textContentType={
+                Platform.OS === 'ios' && this.props.shouldReadOneTimeCode ? 'oneTimeCode' : 'none'
+              }
               maxLength={1}
               selectionColor={Colors.Transparent}
               style={[styles.container, borderStyle, this.props.style]}

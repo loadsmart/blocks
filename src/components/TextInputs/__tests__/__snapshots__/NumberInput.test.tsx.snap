@@ -30,6 +30,7 @@ exports[`NumberInput render renders with gray border when blurred 1`] = `
       undefined,
     ]
   }
+  textContentType="none"
   underlineColorAndroid="transparent"
 />
 `;
@@ -64,6 +65,7 @@ exports[`NumberInput render renders with green border when focused 1`] = `
       undefined,
     ]
   }
+  textContentType="none"
   underlineColorAndroid="transparent"
 />
 `;

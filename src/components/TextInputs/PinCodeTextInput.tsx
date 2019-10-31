@@ -48,6 +48,7 @@ export default class PinCodeTextInput extends Component<Props, State> {
               this.onChangeDigit(i, text)
             }}
             digit={this.state.digits[i]}
+            shouldReadOneTimeCode={i === 0}
           />
         ))}
       </View>

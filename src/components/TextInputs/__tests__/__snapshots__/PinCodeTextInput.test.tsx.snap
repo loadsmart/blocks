@@ -37,6 +37,7 @@ exports[`PinCodeTextInput render renders all number inputs with a digit if auth 
         undefined,
       ]
     }
+    textContentType="oneTimeCode"
     underlineColorAndroid="transparent"
     value="1"
   />
@@ -69,6 +70,7 @@ exports[`PinCodeTextInput render renders all number inputs with a digit if auth 
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value="2"
   />
@@ -101,6 +103,7 @@ exports[`PinCodeTextInput render renders all number inputs with a digit if auth 
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value="3"
   />
@@ -133,6 +136,7 @@ exports[`PinCodeTextInput render renders all number inputs with a digit if auth 
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value="4"
   />
@@ -165,6 +169,7 @@ exports[`PinCodeTextInput render renders all number inputs with a digit if auth 
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value="5"
   />
@@ -197,6 +202,7 @@ exports[`PinCodeTextInput render renders all number inputs with a digit if auth 
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value="6"
   />
@@ -240,6 +246,7 @@ exports[`PinCodeTextInput render renders all number inputs with a empty value if
         undefined,
       ]
     }
+    textContentType="oneTimeCode"
     underlineColorAndroid="transparent"
     value=""
   />
@@ -272,6 +279,7 @@ exports[`PinCodeTextInput render renders all number inputs with a empty value if
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value=""
   />
@@ -304,6 +312,7 @@ exports[`PinCodeTextInput render renders all number inputs with a empty value if
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value=""
   />
@@ -336,6 +345,7 @@ exports[`PinCodeTextInput render renders all number inputs with a empty value if
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value=""
   />
@@ -368,6 +378,7 @@ exports[`PinCodeTextInput render renders all number inputs with a empty value if
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value=""
   />
@@ -400,6 +411,7 @@ exports[`PinCodeTextInput render renders all number inputs with a empty value if
         undefined,
       ]
     }
+    textContentType="none"
     underlineColorAndroid="transparent"
     value=""
   />

@@ -20,6 +20,22 @@ describe('PinCodeTextInput', () => {
       )
       expect(testRenderer.toJSON()).toMatchSnapshot()
     })
+
+    it('renders first input with textContentType being oneTimeCode and other as none', () => {
+      const testRenderer = renderer.create(
+        <PinCodeTextInput authCode={'123456'} onChangeInput={jest.fn()} />
+      )
+
+      const inputs = testRenderer.root.findAllByType(NumberInput)
+      const firstInput = inputs[0]
+      const otherInputs = inputs.slice(1, inputs.length - 1)
+
+      expect(firstInput.props.shouldReadOneTimeCode).toBeTruthy()
+
+      otherInputs.forEach(input => {
+        expect(input.props.shouldReadOneTimeCode).toBeFalsy()
+      })
+    })
   })
 
   describe('onChangeDigit', () => {

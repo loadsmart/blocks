@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInput as RNTextInput, TextInput } from 'react-native'
+import { TextInput, TextInput as RNTextInput } from 'react-native'
 import renderer from 'react-test-renderer'
 import NumberInput from '../NumberInput'
 
@@ -27,6 +27,20 @@ describe('NumberInput', () => {
       const input = testRenderer.root.findByType(RNTextInput)
       input.props.onFocus()
       expect(testRenderer.toJSON()).toMatchSnapshot()
+    })
+
+    it('renders as oneTimeCode textContentType if shouldReadOneTimeCode is true', () => {
+      const testRenderer = renderer.create(
+        <NumberInput onChangeText={jest.fn()} shouldReadOneTimeCode />
+      )
+      const input = testRenderer.root.findByType(RNTextInput)
+      expect(input.props.textContentType).toEqual('oneTimeCode')
+    })
+
+    it('renders as none textContentType if shouldReadOneTimeCode is false', () => {
+      const testRenderer = renderer.create(<NumberInput onChangeText={jest.fn()} />)
+      const input = testRenderer.root.findByType(RNTextInput)
+      expect(input.props.textContentType).toEqual('none')
     })
   })
 
