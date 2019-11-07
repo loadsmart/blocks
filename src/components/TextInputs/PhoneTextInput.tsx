@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import TextInput from './TextInput'
 import { ViewProps } from 'react-native'
+import TextInput from './TextInput'
 
 interface Props extends ViewProps {
   onChangeText: (text: string) => void
