@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PhoneTextInput> snapshot renders with placeholder 1`] = `
+<TextInput
+  allowFontScaling={true}
+  focusable={true}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  placeholder="Phone number"
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 26,
+        "borderWidth": 2,
+        "color": "#3c3d3a",
+        "fontFamily": "SharpSans-Semibold",
+        "fontSize": 16,
+        "height": 52,
+        "paddingHorizontal": 28,
+      },
+      undefined,
+      Object {
+        "borderColor": "#fff",
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`<PhoneTextInput> snapshot renders without placeholder 1`] = `
+<TextInput
+  allowFontScaling={true}
+  focusable={true}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  rejectResponderTermination={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 26,
+        "borderWidth": 2,
+        "color": "#3c3d3a",
+        "fontFamily": "SharpSans-Semibold",
+        "fontSize": 16,
+        "height": 52,
+        "paddingHorizontal": 28,
+      },
+      undefined,
+      Object {
+        "borderColor": "#fff",
+      },
+    ]
+  }
+  underlineColorAndroid="transparent"
+/>
+`;
