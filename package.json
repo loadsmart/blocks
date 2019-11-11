@@ -29,19 +29,23 @@
     "url": "https://github.com/loadsmart/blocks/issues"
   },
   "homepage": "https://github.com/loadsmart/blocks#readme",
-  "peerDependencies": {
-    "react": "^16.6.1",
-    "react-native": "^0.59.5"
-  },
   "files": [
     "lib/**/*",
     "assets/**/*"
   ],
+  "dependencies": {
+    "styled-components": "^4.4.1"
+  },
+  "peerDependencies": {
+    "react": "^16.6.1",
+    "react-native": "^0.59.5"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.15",
     "@types/react": "^16.8.22",
     "@types/react-native": "^0.57.64",
     "@types/react-test-renderer": "^16.8.2",
+    "@types/styled-components": "^4.1.22",
     "codecov": "^3.5.0",
     "husky": "^2.4.1",
     "jest": "^24.8.0",

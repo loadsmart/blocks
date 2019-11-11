@@ -1,4 +1,5 @@
 const Fonts = {
+  PTMonoRegular: 'PTMono-Regular',
   SharpSansBold: 'SharpSans-Bold',
   SharpSansItalic: 'SharpSans-BoldItalic',
   SharpSansBook: 'SharpSans-Book',

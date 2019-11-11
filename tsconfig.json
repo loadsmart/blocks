@@ -8,7 +8,8 @@
     "strict": true,
     "jsx": "react",
     "esModuleInterop": true,
-    "lib": ["es6"]
+    "lib": ["es6"],
+    "skipLibCheck": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
