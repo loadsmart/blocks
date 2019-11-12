@@ -8,9 +8,10 @@ interface Props extends ViewProps {
 
 export default class IconChevron extends PureComponent<Props> {
   public render() {
+    const { style, testID } = this.props
     const tintColor = this.props.tintColor ? this.props.tintColor : Colors.LightGray
     return (
-      <View style={this.props.style}>
+      <View {...{ style, testID }}>
         <Image source={Images.Chevron} style={{ tintColor }} />
       </View>
     )

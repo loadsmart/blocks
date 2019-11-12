@@ -21,9 +21,9 @@ interface Props extends ComponentProps<any> {
 
 export default class TitleValueCell extends PureComponent<Props> {
   public render() {
-    const { icon, title, value, hasChevron, style, valueStyle } = this.props
+    const { icon, title, value, hasChevron, style, valueStyle, testID } = this.props
     return (
-      <View style={[styles.container, style]}>
+      <View style={[styles.container, style]} {...{ testID }}>
         <View style={styles.titleWrapper}>
           {icon && <Image source={icon} style={styles.icon} />}
           <Text style={styles.title}>{title}</Text>

@@ -9,13 +9,17 @@ interface Props extends ViewProps {
 
 export default class Radio extends PureComponent<Props> {
   public render() {
+    const { selected, testID } = this.props
     return (
       <ThemeContext.Consumer>
         {theme => {
-          const isSelected = this.props.selected === true
+          const isSelected = selected === true
           const color = isSelected ? theme.primaryColor : Colors.Tuna
           return (
-            <View style={[styles.outerCircle, this.props.style, { borderColor: color }]}>
+            <View
+              style={[styles.outerCircle, this.props.style, { borderColor: color }]}
+              {...{ testID }}
+            >
               {isSelected && <View style={[styles.innerCircle, { backgroundColor: color }]} />}
             </View>
           )

@@ -10,12 +10,12 @@ interface Props extends ViewProps {
 
 export default class RadioSelectCell extends Component<Props> {
   public render() {
-    const { selected, title } = this.props
+    const { selected, title, testID } = this.props
     const extraTitleStyle = {
       fontFamily: selected ? Fonts.SharpSansBold : Fonts.SharpSansMedium,
     }
     return (
-      <View style={[styles.container, this.props.style]}>
+      <View style={[styles.container, this.props.style]} {...{ testID }}>
         <Radio selected={selected === true} style={styles.radio} />
         <Text style={[styles.title, extraTitleStyle]}>{title}</Text>
       </View>

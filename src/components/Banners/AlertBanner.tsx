@@ -5,14 +5,15 @@ import { BannerDisplayStyle, BannerProps } from './BannerProps'
 
 export default class AlertBanner extends PureComponent<BannerProps> {
   public render() {
+    const { message, onPress, testID } = this.props
     const styles = stylesFromProps(this.props)
     return (
-      <TouchableWithoutFeedback onPress={this.props.onPress}>
+      <TouchableWithoutFeedback {...{ onPress, testID }}>
         <View style={[styles.wrapper, this.props.style]}>
           <Image source={Images.Warning} />
-          {this.props.message && (
+          {message && (
             <Text style={styles.text} numberOfLines={2}>
-              {this.props.message}
+              {message}
             </Text>
           )}
         </View>
