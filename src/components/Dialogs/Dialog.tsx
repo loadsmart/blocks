@@ -25,19 +25,16 @@ export interface DialogProps extends DismissibleModalProps {
 
 export class Dialog extends PureComponent<DialogProps> {
   public render() {
+    const { image, imageStyle, title, titleStyle, message, inputField, buttons } = this.props
     const buttonsMarginStyle = { marginTop: this.props.inputField ? 8 : 22 }
 
     return (
       <DialogBox {...this.props} dialogStyle={styles.box}>
-        {this.props.image && <Image source={this.props.image} style={this.props.imageStyle} />}
-        {this.props.title && (
-          <Text style={[styles.title, this.props.titleStyle]}>{this.props.title}</Text>
-        )}
-        {this.props.message && <Text style={styles.message}>{this.props.message}</Text>}
-        {this.props.inputField && <View style={styles.inputField}>{this.props.inputField}</View>}
-        {this.props.buttons && (
-          <View style={[styles.buttons, buttonsMarginStyle]}>{this.props.buttons}</View>
-        )}
+        {image && <Image source={image} style={imageStyle} />}
+        {title && <Text style={[styles.title, titleStyle]}>{title}</Text>}
+        {message && <Text style={styles.message}>{message}</Text>}
+        {inputField && <View style={styles.inputField}>{inputField}</View>}
+        {buttons && <View style={[styles.buttons, buttonsMarginStyle]}>{buttons}</View>}
       </DialogBox>
     )
   }

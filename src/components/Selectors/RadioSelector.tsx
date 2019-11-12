@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from 'react'
+import React, { Component } from 'react'
 import { FlatList, TouchableWithoutFeedback, View, ViewProps } from 'react-native'
 import { Colors } from '../../res'
 import { RadioSelectCell } from '../Cells'
@@ -20,15 +20,17 @@ export default class RadioSelector extends Component<Props, State> {
   }
 
   public render() {
+    const { items, testID } = this.props
     return (
       <FlatList
-        data={this.props.items}
+        data={items}
         keyExtractor={(_, index) => `${index}`}
         extraData={this.state}
         renderItem={this.renderItem.bind(this)}
         showsVerticalScrollIndicator={false}
         style={this.props.style}
         ItemSeparatorComponent={this.renderSeparator.bind(this)}
+        {...{ testID }}
       />
     )
   }

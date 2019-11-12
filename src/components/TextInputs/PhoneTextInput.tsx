@@ -20,12 +20,14 @@ export default class PhoneTextInput extends Component<Props, State> {
   }
 
   public render() {
+    const { placeholder, testID } = this.props
     return (
       <TextInput
-        placeholder={this.props.placeholder ? this.props.placeholder : ''}
+        placeholder={placeholder ? placeholder : ''}
         onChangeText={phone => this.applyChanges(phone)}
         keyboardType={'phone-pad'}
         value={this.state.phoneNumber}
+        {...{ testID }}
       />
     )
   }

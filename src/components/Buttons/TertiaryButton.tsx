@@ -11,11 +11,13 @@ interface Props extends ViewProps {
 
 export default class TertiaryButton extends PureComponent<Props> {
   public render() {
+    const { title, onPress, testID } = this.props
     const styles = stylesFromProps(this.props)
+
     return (
-      <TouchableOpacity onPress={this.props.onPress}>
+      <TouchableOpacity {...{ onPress, testID }}>
         <>
-          <Text style={[styles.title, this.props.style]}>{this.props.title}</Text>
+          <Text style={[styles.title, this.props.style]}>{title}</Text>
         </>
       </TouchableOpacity>
     )

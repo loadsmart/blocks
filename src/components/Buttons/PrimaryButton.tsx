@@ -10,17 +10,16 @@ export default class PrimaryButton extends PureComponent<ButtonProps> {
   }
 
   public render() {
+    const { displayState, testID } = this.props
     return (
       <ThemeContext.Consumer>
         {theme => {
           const styles = themedStyles(theme, this.props.style)
           return (
-            <TouchableOpacity onPress={this.onPress.bind(this)}>
+            <TouchableOpacity onPress={this.onPress.bind(this)} {...{ testID }}>
               <View style={[styles.wrapper, this.props.style]}>
-                {this.props.displayState !== ButtonDisplayState.Loading &&
-                  this.renderNormalState(styles)}
-                {this.props.displayState === ButtonDisplayState.Loading &&
-                  this.renderLoadingState(styles)}
+                {displayState !== ButtonDisplayState.Loading && this.renderNormalState(styles)}
+                {displayState === ButtonDisplayState.Loading && this.renderLoadingState(styles)}
               </View>
             </TouchableOpacity>
           )

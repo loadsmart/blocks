@@ -9,14 +9,17 @@ export default class SecondaryButton extends PureComponent<ButtonProps> {
   }
 
   public render() {
+    const { displayState, testID } = this.props
     const styles = stylesFromProps(this.props)
+
     return (
       <TouchableOpacity
         onPress={this.onPress.bind(this)}
         style={[styles.wrapper, this.props.style]}
+        {...{ testID }}
       >
-        {this.props.displayState !== ButtonDisplayState.Loading && this.renderNormalState()}
-        {this.props.displayState === ButtonDisplayState.Loading && this.renderLoadingState()}
+        {displayState !== ButtonDisplayState.Loading && this.renderNormalState()}
+        {displayState === ButtonDisplayState.Loading && this.renderLoadingState()}
       </TouchableOpacity>
     )
   }

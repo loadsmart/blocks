@@ -33,6 +33,7 @@ export default class NumberInput extends PureComponent<Props, State> {
   }
 
   public render() {
+    const { digit, testID } = this.props
     return (
       <ThemeContext.Consumer>
         {theme => {
@@ -50,9 +51,10 @@ export default class NumberInput extends PureComponent<Props, State> {
               onBlur={this.onBlur}
               onFocus={this.onFocus}
               blurOnSubmit={false}
-              value={this.props.digit}
+              value={digit}
               onKeyPress={this.onKeyPress}
               caretHidden={true}
+              {...{ testID }}
             />
           )
         }}
