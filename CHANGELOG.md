@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2019-11-14
+### Added
+- OneTimeCodeTextInput component
+  
+### Changed
+- Added testID to most components
+
 ## [1.3.0] - 2019-11-07
 ### Added
 - PhoneTextInput component (@lenoirzamboni)
