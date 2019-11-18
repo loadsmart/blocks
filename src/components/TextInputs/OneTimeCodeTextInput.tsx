@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TextInputProps } from 'react-native'
+import { Platform, TextInputProps } from 'react-native'
 import styled from 'styled-components/native'
 import Fonts from '../../res/fonts'
 
@@ -13,14 +13,16 @@ const StyledTextInput = styled.TextInput<any>`
   font-size: 64;
   color: #333;
   letter-spacing: 10;
-  height: 60px;
   width: 300px;
+  ${Platform.select({
+    android: 'height: 85px; alignSelf: center;',
+  })};
 `
 
 const UnderlinesContainer = styled.View`
   flex-direction: row;
   height: 4px;
-  margin: 10px -10px 0 0;
+  margin: 0 -10px 0 0;
 `
 
 const UnderlineView = styled.View`
