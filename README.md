@@ -61,3 +61,11 @@ If you want to take a look and play with the components in this repo, we have a 
 ## License
 
 [MIT](./LICENSE)
+
+## Contributing
+
+### RFCs
+
+If you want to submit a "Request for comments" proposal, branch out from `master` (i.e.: `rfc/my-feature`) copy `0000-template.md` to `rfc/0000-my-feature.md` (where 'my-feature' is descriptive. don't assign an RFC number yet), fill in the RFC and submit a PR.
+
+If your RFC gets approved, you can then merge the PR to `master`.
