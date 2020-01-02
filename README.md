@@ -39,12 +39,12 @@ const customTheme: Theme = {
 }
 
 const MyComponent = () => (
-  <ThemeContext.Provider theme={customTheme}>
+  <ThemeContext.Provider value={customTheme}>
     <View>
       <Text>Are you sure?</Text>
       <PrimaryButton title='Confirm' />
     </View>
-  </ThemeContext>
+  </ThemeContext.Provider>
 )
 ```
 
