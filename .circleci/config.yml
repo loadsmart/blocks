@@ -1,7 +1,7 @@
 version: 2
 
 tag-pattern: &tag-pattern
-  only: /^\d+\.\d+\.\d+$/
+  only: /^v\d+\.\d+\.\d+$/
 
 jobs:
   test:
