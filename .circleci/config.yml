@@ -1,4 +1,8 @@
 version: 2
+
+tag-pattern: &tag-pattern
+  only: /^\d+\.\d+\.\d+$/
+
 jobs:
   test:
     working_directory: ~/blocks
@@ -53,8 +57,36 @@ jobs:
 
     steps:
       - run:
-          name: Trigger blocks-storybook-app build
-          command: echo "TODO Trigger blocks-storybook-app build"
+        name: Trigger blocks-storybook-app build
+        command: echo "TODO Trigger blocks-storybook-app build"
+
+  publish:
+    working_directory: ~/blocks
+    docker:
+      - image: circleci/node:11.10.1
+
+    steps:
+      - checkout
+
+      - run:
+        name: Authenticate npm with registry
+        command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+
+      - run:
+        name: Install project level dependencies 
+        command: yarn install
+
+      - run:
+        name: Build distribution version
+        command: yarn build
+
+      - run: 
+        name: Set project version from latest git tag
+        command: npm version from-git -m "lib bump version"
+          
+      - run:
+        name: Publish to npm
+        command: npm publish --access public
 
 
 workflows:
@@ -68,3 +100,12 @@ workflows:
           filters:
             branches:
               only: master
+      - publish:
+          context: org-global
+          requires:
+            - test
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              <<: *tag-pattern
