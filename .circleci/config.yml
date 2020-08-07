@@ -57,8 +57,8 @@ jobs:
 
     steps:
       - run:
-        name: Trigger blocks-storybook-app build
-        command: echo "TODO Trigger blocks-storybook-app build"
+          name: Trigger blocks-storybook-app build
+          command: echo "TODO Trigger blocks-storybook-app build"
 
   publish:
     working_directory: ~/blocks
@@ -69,24 +69,24 @@ jobs:
       - checkout
 
       - run:
-        name: Authenticate npm with registry
-        command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+          name: Authenticate npm with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
 
       - run:
-        name: Install project level dependencies 
-        command: yarn install
+          name: Install project level dependencies 
+          command: yarn install
 
       - run:
-        name: Build distribution version
-        command: yarn build
+          name: Build distribution version
+          command: yarn build
 
       - run: 
-        name: Set project version from latest git tag
-        command: npm version from-git -m "lib bump version"
+          name: Set project version from latest git tag
+          command: npm version from-git -m "lib bump version"
           
       - run:
-        name: Publish to npm
-        command: npm publish --access public
+          name: Publish to npm
+          command: npm publish --access public
 
 
 workflows:
