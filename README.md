@@ -2,7 +2,7 @@
 Loadsmart's React Native Components
 
 [![Build Status](https://circleci.com/gh/loadsmart/blocks.svg?style=shield)](https://circleci.com/gh/loadsmart/blocks/tree/master)
-[![codecov](https://codecov.io/gh/loadsmart/blocks/branch/master/graph/badge.svg)](https://codecov.io/gh/loadsmart/blocks)
+[![Coverage Status](https://coveralls.io/repos/github/loadsmart/blocks/badge.svg?branch=master)](https://coveralls.io/github/loadsmart/blocks?branch=master)
 [![npm (scoped)](https://img.shields.io/npm/v/@loadsmart/blocks.svg)](https://www.npmjs.com/package/@loadsmart/blocks)
 
 ## Installation
