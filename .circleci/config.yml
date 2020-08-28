@@ -81,10 +81,6 @@ jobs:
       - run:
           name: Build distribution version
           command: yarn build
-
-      - run: 
-          name: Set project version from latest git tag
-          command: npm version from-git -m "lib bump version"
           
       - run:
           name: Publish to npm
