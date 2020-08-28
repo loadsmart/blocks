@@ -1,7 +1,10 @@
-version: 2
+version: 2.1
 
 tag-pattern: &tag-pattern
   only: /^v\d+\.\d+\.\d+$/
+
+orbs:
+  coveralls: coveralls/coveralls@1.0.6
 
 jobs:
   test:
@@ -33,7 +36,7 @@ jobs:
           name: jest tests
           command: |
             mkdir -p test-results/jest
-            yarn jest --maxWorkers=2
+            yarn jest --maxWorkers=2 --ci --coverage --reporters=default
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
 
@@ -43,9 +46,8 @@ jobs:
       - store_artifacts:
           path: test-results
 
-      - run:
-          name: codecov
-          command: ./node_modules/codecov/bin/codecov
+      - coveralls/upload:
+          verbose: true
 
   distribute_ios:
     working_directory: ~/blocks

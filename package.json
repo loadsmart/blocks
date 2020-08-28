@@ -46,7 +46,6 @@
     "@types/react-native": "^0.57.64",
     "@types/react-test-renderer": "^16.8.2",
     "@types/styled-components": "^4.1.22",
-    "codecov": "^3.5.0",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
     "lint-staged": "^8.2.1",
