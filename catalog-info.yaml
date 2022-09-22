@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: blocks
+  description: Loadsmart's React Native Components
+  annotations:
+    github.com/project-slug: loadsmart/blocks
+  tags:
+    - typescript
+    - react
+spec:
+  type: other
+  lifecycle: production
+  owner: mobile
